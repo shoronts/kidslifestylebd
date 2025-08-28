@@ -1,0 +1,89 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+Thumbs.db
+
+# Icon
+Icon
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.#*
+._*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Node / frontend package manager
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnp/
+.pnpm-store/
+
+# Build / output folders
+dist/
+build/
+out/
+public/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vercel/
+.vite/
+.svelte-kit/
+
+# Static site generator caches
+.cache-loader/
+
+# Dependency directories
+bower_components/
+
+# Coverage and reports
+coverage/
+.nyc_output/
+
+# Logs
+*.log
+logs/
+debug.log*
+
+# Environment variables
+.env
+.env.*
+.env.local
+
+# Security / credentials
+*.pem
+*.key
+*.crt
+*.p12
+
+# Misc
+Thumbs.db
+.DS_Store
+
+# Python (in case tools used)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Misc artifacts
+*.bak
+*.orig
