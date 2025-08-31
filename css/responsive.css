@@ -13,15 +13,15 @@
   }
   /* Styles for xs */
   .page-banner .banner-content{
-      position: relative;
-      height: 100%;
-      padding: 10px 0px;
-    }
+    position: relative;
+    height: 100%;
+    padding: 10px 0px;
+  }
 
-    /* Google map of contact page */
-    .map-wrap { aspect-ratio: 4/3; }
-     /* Home page hero section */
-   /* Hero banner */
+  /* Google map of contact page */
+  .map-wrap { aspect-ratio: 4/3; }
+     
+   /* Home page Hero banner */
  .hero-section .banner-right{
     padding-top:0px;
     padding-bottom: 0px;
@@ -30,7 +30,7 @@
   .image-swiper img{
     width:75%;
   }
-  /* Top picks / Special Offer */
+  /* Home page Top picks / Special Offer */
   #top-picks .banner::after{
     background-position: center;
   }
@@ -41,11 +41,11 @@
   #countdown p {
     font-size: 30px;
   }
-  /* Unique apeal */
+  /* Home page Unique apeal */
   #unique-appeal h4{
     font-size:18px;
   }
-  /* Cards */
+  /* Home page Cards */
   #cards .grid-banner-content{
     background-color: rgba(255, 255, 255, 0.4);
     padding: 30px;
@@ -55,6 +55,11 @@
   }
   #cards .grid-banner-content .main-title {
   font-size: 20px;
+  }
+
+  /* Single product page */
+  #singleProduct .single-product-img{
+    height:100%;
   }
   
 }
@@ -77,6 +82,7 @@
     padding: 10px 0px;
   }
 
+  /* Home page Hero section */
  .hero-section .banner-right{
     padding-top:0px;
     padding-bottom: 0px;
@@ -84,7 +90,7 @@
   .image-swiper img{
     width:70%;
   }
-  /* Top picks / Special Offer */
+  /* Home page Top picks / Special Offer */
   #top-picks .banner::after{
     background-position: center;
   }
@@ -95,7 +101,7 @@
   #countdown p {
     font-size: 35px;
   }
-  /* Cards */
+  /* Home page Cards */
   #cards .grid-banner-content{
     background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
@@ -106,11 +112,18 @@
   #cards .grid-banner-content .main-title {
   font-size: 20px;
   }
+
+  /* Single product page */
+  #singleProduct .single-product-img{
+    height:100%;
+    margin-bottom: 50px;
+  }
     
 }
 
 /* Medium devices (tablets, ≥768px) */
 @media (min-width: 768px) and (max-width: 991px) {
+  /* Universal (All pages) */
   .container{
     max-width: 850px!important;
   }
@@ -120,7 +133,7 @@
     height: 100%;
     padding: 60px 0px;
   }
-  /* Top picks / Special Offer */
+  /* Home page Top picks / Special Offer */
   #top-picks .banner::after{
     background-position: center;
   }
@@ -131,13 +144,23 @@
   #countdown p {
     font-size: 40px;
   }
-  /* Cards */
+  /* Home page Cards */
   #cards .grid-banner-content{
     background-color: rgba(255, 255, 255, 0.5);
     padding: 30px;
   }
   #cards .grid-banner-inner {
     max-width: 100%; 
+  }
+  /* Single product page */
+  #singleProduct .single-product-img{
+    height:100%;
+    margin-bottom: 50px;
+  }
+  /* Single Product page Image slider navigation */
+  .productThumbs .swiper-button-next,
+  .productThumbs .swiper-button-prev {
+    opacity: 1;
   }
 }
 
@@ -156,21 +179,15 @@
     align-items: flex-end;
     padding: 30px;
   }
-  /* Styles for lg */
-}
-
-/* Extra large devices (large desktops, ≥1200px) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  /* Styles for xl */
-}
-
-/* Extra extra large devices (very wide screens, ≥1400px) */
-@media (min-width: 1400px) {
-  /* Styles for xxl */
+  /* Single Product page Image slider navigation */
+  .productThumbs .swiper-button-next,
+  .productThumbs .swiper-button-prev {
+    opacity: 0;
+  }
 }
 
 /* Desktop hover for large screens */
-@media (min-width: 992px) {
+@media (min-width: 1199px) and (max-width:1440px) {
   /* Mega menu for desktop */
 .dropdown-menu{
   display: block!important;
@@ -183,7 +200,6 @@
   border-radius: 10px;
 }
 
-/* Full-width positioning */
 .navbar .nav-item.dropdown .dropdown-menu {
   position: absolute;
   top: 100%;   /* right below navbar */
@@ -196,6 +212,12 @@
   visibility: hidden;
   transition: all 0.4s ease;
 }
+/* Single Product page Image slider navigation */
+  .productThumbs .swiper-button-next,
+  .productThumbs .swiper-button-prev {
+    opacity: 0;
+  }
 }
+
 
 

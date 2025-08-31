@@ -111,4 +111,59 @@ const cardSwiper = new Swiper('.card-swiper', {
     });
 
 
+  // Init Swiper
+  const thumbSwiper = new Swiper(".productThumbs", {
+    direction: "vertical", // default vertical
+    slidesPerView: 3,
+    spaceBetween: 20,
+    breakpoints: {
+      480: {
+        direction: "horizontal",
+        slidesPerView: 3
+      },
+      768: {
+        direction: "horizontal",
+        slidesPerView: 4
+      },
+      992: {
+        slidesPerView: 4
+      },
+      992: {
+        direction: "vertical", 
+        slidesPerView: 3
+      },
+      1440:{
+        direction: "vertical", 
+        slidesPerView: 3
+      }
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  // Single product page // Reccomended products
+  // New arrival 
+    const reccomendedSwiper = new Swiper('.reccomended-swiper', {
+        slidesPerView: 1, // default for very small screens
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+        breakpoints: {
+          480: { slidesPerView: 2 },   // small mobile
+          768: { slidesPerView: 3 },   // tablet
+          992: { slidesPerView: 4 },   // small desktop
+          1200: { slidesPerView: 4 },  // large desktop
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        clickable: true, // so user can click the dots
+      }
+    });
+
+
     

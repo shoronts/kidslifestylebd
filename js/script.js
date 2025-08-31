@@ -54,3 +54,68 @@ const btnBackToTop = document.getElementById("btnBackToTop");
   btnBackToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // Single Product page (Change big image on thumbnail click)
+  document.querySelectorAll('.thumb-img').forEach(img => {
+    img.addEventListener('click', function () {
+      // update main image
+      document.getElementById('mainImage').src = this.src;
+      // remove active from all
+      document.querySelectorAll('.thumb-img').forEach(i => i.classList.remove('active-thumb'));
+      // add active to clicked
+      this.classList.add('active-thumb');
+    });
+  });
+
+  // Single product page // Grab all the tag items
+  const weightTags = document.querySelectorAll(".weight-tags p");
+  const weightValue = document.querySelector(".weight-value");
+
+  weightTags.forEach(tag => {
+    tag.addEventListener("click", () => {
+      weightValue.textContent = tag.textContent.replace(" G", ""); // remove G if needed
+      
+      weightTags.forEach(t => t.classList.remove("active"));
+      tag.classList.add("active");
+    });
+  });
+
+
+  // Single product page // Quantity increase and reduce
+  document.addEventListener("DOMContentLoaded", () => {
+      const minusBtn = document.querySelector(".minus-btn");
+      const plusBtn = document.querySelector(".plus-btn");
+      const qtyInput = document.querySelector(".qty-input");
+
+      plusBtn.addEventListener("click", () => {
+        qtyInput.value = parseInt(qtyInput.value) + 1;
+      });
+
+      minusBtn.addEventListener("click", () => {
+        let currentValue = parseInt(qtyInput.value);
+        if (currentValue > 1) {
+          qtyInput.value = currentValue - 1;
+        }
+      });
+    });
+
+
+  //Single product page // Share the product to social media
+  document.getElementById("shareBtn").addEventListener("click", async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: "Check this out!",
+          url: window.location.href
+        });
+        console.log("Thanks for sharing!");
+      } catch (err) {
+        console.error("Share failed:", err.message);
+      }
+    } else {
+      // fallback (copy link to clipboard)
+      navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard!");
+    }
+  });

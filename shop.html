@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Title -->
-  <title>Buy Toys Online in Bangladesh | Kids Lifestyle</title>
-
+  <!-- Title + Author + SEO -->
+  <title>Shop - Buy Toys Online in Bangladesh | Kids lifestyle</title>
+  
   <meta name="author" content="Mohammad Ayub">
-  <meta name="description" content="Kids Lifestyle is your trusted online toy shop in Bangladesh. Shop dolls, action figures, puzzles, cars, and kids' playsets with fast delivery all over Bangladesh.">
-  <meta name="keywords" content="toys in Bangladesh, toy shop BD, kids toys, buy toys online, Kids Lifestyle">
+  <meta name="description" content="Kids lifestyle is your trusted online toy shop in Bangladesh. Shop dolls, action figures, puzzles, cars, and kids' playsets with fast delivery all over BD.">
+  <meta name="keywords" content="toys in Bangladesh, toy shop BD, kids toys, buy toys online, kids lifestyle">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://example.com/" />
 
@@ -25,7 +25,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="Buy Toys Online in Bangladesh | Kids lifestyle">
-  <meta property="og:description" content="Shop the best kids' toys in Bangladesh – dolls, action figures, puzzles, cars, and more with fast delivery all over Bangladesh.">
+  <meta property="og:description" content="Shop the best kids' toys in Bangladesh – dolls, action figures, puzzles, cars, and more with fast delivery all over BD.">
   <meta property="og:image" content="https://example.com/og-image.jpg">
   <meta property="og:url" content="https://example.com">
   <meta property="og:type" content="website">
@@ -55,125 +55,19 @@
   <!-- Custom responsive Styles -->
   <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Custom universal Styles -->
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="css/custom.css">
-
-  <!-- Inline styles -->
-  <style>
-    /* Hoem page Hero section Cloud mask at the bottom */
-    .hero-section::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 280px;
-      bottom: -50px;
-      left: 0;
-      right: 0;
-      z-index: 0;
-
-      /* The color of the cloud */
-      background-color: white;
-
-      /* Mask to shape it like your cloud */
-      -webkit-mask-image: url('assets/images/cloud.png'); 
-      -webkit-mask-repeat: repeat-x;
-      -webkit-mask-position: bottom center;
-      -webkit-mask-size: contain;
-      mask-image: url('assets/images/cloud.png');
-      mask-repeat: repeat-x;
-      mask-position: bottom center;
-      mask-size: contain;
-      pointer-events: none;
-    }
-
-    /* Shop by age */
-    #age .grid-banner-block-image {
-      position: relative; 
-      overflow: hidden;
-      border-radius: 16px;
-    }
-    #age .grid-banner-block-image::before{
-      content: '';
-      -webkit-mask-image: url('https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036');
-      mask-image: url('https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036');
-      -webkit-mask-size: contain;
-      -webkit-mask-position: bottom center;
-      -webkit-mask-repeat: no-repeat;
-      pointer-events: all;
-      position: absolute;
-      top: 0;
-      transition: all 0.3s linear;
-      height: 100%;
-      width: 100%;
-      z-index: 0;
-      bottom: 0;
-      opacity: 1;
-      transform: scale(1);
-    }
-    #age .grid-banner-block-image.one::before{
-      background-color: #d6e9f1;
-    }
-    #age .grid-banner-block-image.two::before{
-      background-color: #f3d5cd;
-    }
-    #age .grid-banner-block-image.three::before{
-      background-color: #cbddb9;
-    }
-    #age .grid-banner-block-image.four::before{
-      background-color: #ceccf2;
-    }
-    #age .grid-banner-block-image.five::before{
-      background-color: #ffedb4;
-    }
-    #age .age-card-link:hover .grid-banner-block-image::before{
-      transform: scale(1.2); 
-      opacity: 0;           
-    }
-    #age .grid-banner-block-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    #age .grid-banner-content {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center; 
-      align-items: center;     
-      text-align: center;     
-    }
-    #age .swiper-pagination-lock{
-      display: inline-block;
-    }
-    /* Top Picks */
-    #top-picks .banner::after{
+  
+  <!-- Inline CSS -->
+   <style>
+    .page-banner .banner-content::after{
       content: '';
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-image: url('https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_6_a17bd2b3-6aa7-41b6-ab69-fa424c26901c.jpg?v=1707982081');
+      background-image: url('https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_11-1.png?v=1707972746&width=1920');
       background-repeat: no-repeat;
-      background-size: cover;
-      position: absolute;
-      top: 0;
-      left:0;
-      border-radius: 20px;
-    }
-
-    /* Offer card */
-    .offer-card{
-      position: relative;
-    }
-    .offer-card::after{
-      content: '';
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background-image: url('https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_8.png?v=1707910334');
-      background-repeat: no-repeat;
+      background-position: center;
       background-size: cover;
       position: absolute;
       top: 0;
@@ -181,17 +75,10 @@
       border-radius: var(--media-radius);
       border-radius: 20px;
     }
-    @media (max-width: 767px) {
-      /* Home page hero section */
-   /* Hero banner */
-      .hero-section::after {
-        height: 280px;
-        bottom: -25px;
-      }
-    }
-  </style>
+   </style>
+
 </head>
-<body>
+<body class="">
   <!-- Top Header -->
   <div class="top-header py-2 border-bottom">
     <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center small">
@@ -546,970 +433,556 @@
     </div>
   </nav>
 
-
-
-  <!-- Hero swiper -->
-  <section class="hero-section ">
-    <div class="container">
-      <div class="swiper hero-swiper">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="d-flex flex-column flex-md-row-reverse">
-              <!-- Image -->
-              <div class="w-100 w-md-50 banner-right">
-                <div class="d-flex justify-content-center align-items-center">
-                  <img class="img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/AdobeStock_608840080_08a03c69-e731-452b-ac03-c71652b14bde.png?v=1707907353&width=535" alt="">
-                </div>
-              </div>
-              <!-- Content -->
-              <div class="w-100 w-md-50 d-flex justify-content-center align-items-center">
-                <div class="pb-4 pb-lg-0 d-flex flex-column justify-content-sm-center align-items-center">
-                  <div class="d-flex flex-column align-items-center align-items-md-start">
-                    <h4 class="text-uppercase fs-6 dark-color mb-2 mb-lg-4">Seasonal Sale - up to 30% Off</h4>
-                    <h1 class="text dark-color mb-2 mb-lg-4">Babies Soft Toys</h1>
-                    <p class="fs-6 text dark-color mb-2 mb-lg-4">Price from BDT 570/-</p>
-                    <a class="shop-now-btn" href="">Shop now</a>
-                  </div>
-                </div>
-              </div>
+  <main>
+    <!-- Banner -->
+    <section class="pt-4">
+      <div id="contact-page-banner" class="container-fluid page-banner">
+        <div class="px-2 px-lg-4">
+          <div class="banner-content h-100 rounded-3">
+            <div class="text-center py-4">
+              <h2 class="mb-3">Shop</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0 d-flex justify-content-center align-items-center">
+                  <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                  <li class="breadcrumb-item"><a href="shop.html" class="text-decoration-none">Shop</a></li>
+                </ol>
+              </nav>
             </div>
           </div>
-          
-          <!-- Slide 2 -->
-           <div class="swiper-slide">
-            <div class="d-flex flex-column flex-md-row-reverse">
-              <!-- Image -->
-              <div class="w-100 w-md-50 banner-right">
-                <div class="d-flex justify-content-center align-items-center">
-                  <img class="img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/AdobeStock_609517545_273df5c7-5a5c-45b1-a5ad-b97264621de5.png?v=1707907353&width=535" alt="">
-                </div>
-              </div>
-              <!-- Content -->
-              <div class="w-100 w-md-50 d-flex justify-content-center align-items-center">
-                <div class="pb-4 pb-lg-0 d-flex flex-column justify-content-sm-center align-items-center">
-                  <div class="d-flex flex-column align-items-center align-items-md-start">
-                    <h4 class="text-uppercase fs-6 dark-color mb-2 mb-lg-4">Seasonal Sale - up to 30% Off</h4>
-                    <h1 class="text dark-color mb-2 mb-lg-4">Blankie Buddies</h1>
-                    <p class="fs-6 text dark-color mb-2 mb-lg-4">Price from BDT 550/-</p>
-                    <a class="shop-now-btn" href="">Shop now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-           <div class="swiper-slide">
-            <div class="d-flex flex-column flex-md-row-reverse">
-              <!-- Image -->
-              <div class="w-100 w-md-50 banner-right">
-                <div class="d-flex justify-content-center align-items-center">
-                  <img class="img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/AdobeStock_606213536_99f8f9ed-5075-489c-b24c-97a008f5b638.png?v=1707907353&width=550" alt="">
-                </div>
-              </div>
-              <!-- Content -->
-              <div class="w-100 w-md-50 d-flex justify-content-center align-items-center">
-                <div class="pb-4 pb-lg-0 d-flex flex-column justify-content-sm-center align-items-center">
-                  <div class="d-flex flex-column align-items-center align-items-md-start">
-                    <h4 class="text-uppercase fs-6 dark-color mb-2 mb-lg-4">Seasonal Sale - up to 30% Off</h4>
-                    <h1 class="text dark-color mb-2 mb-lg-4">Plush Animals</h1>
-                    <p class="fs-6 text dark-color mb-2 mb-lg-4">Price from BDT 540/-</p>
-                    <a class="shop-now-btn" href="">Shop now</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="shop" class="section-padding px-4">
+      <div class="container-fluid">
+        <!-- Mobile button to open sidebar -->
+          <div class="d-lg-none py-3">
+            <button class="shop-now-btn" data-bs-toggle="offcanvas" data-bs-target="#blogSidebar">
+              <svg class="main-color" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="filters">
+                <path d="M19,2H5A3,3,0,0,0,2,5V6.17a3,3,0,0,0,.25,1.2l0,.06a2.81,2.81,0,0,0,.59.86L9,14.41V21a1,1,0,0,0,.47.85A1,1,0,0,0,10,22a1,1,0,0,0,.45-.11l4-2A1,1,0,0,0,15,19V14.41l6.12-6.12a2.81,2.81,0,0,0,.59-.86l0-.06A3,3,0,0,0,22,6.17V5A3,3,0,0,0,19,2ZM13.29,13.29A1,1,0,0,0,13,14v4.38l-2,1V14a1,1,0,0,0-.29-.71L5.41,8H18.59ZM20,6H4V5A1,1,0,0,1,5,4H19a1,1,0,0,1,1,1Z">
+                  </path>
+              </svg>
+              <span>Filter</span>
+            </button>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              
+              <!-- Sidebar (visible on lg+, offcanvas on sm) -->
+              <nav class="sidebar col-lg-3 col-md-4  d-none d-lg-block bg-light-color border-end p-4 rounded-4">
+                <h4 class="mb-2">Filter</h4>
+                
+                <div class="accordion" id="shopAccordion">
+                  <!-- Availability Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                              data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h4>Availability</h4>
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" 
+                        aria-labelledby="headingOne">
+                        <div class="accordion-body">
+                          <div class="form-check mb-3 d-flex justify-content-between align-items-center">
+                            <div>
+                              <input class="form-check-input" type="checkbox" value="in-stock" id="inStock">
+                              <label class="form-check-label" for="inStock">In Stock</label>
+                            </div>
+                            <span class="badge">12</span>
+                          </div>
+                          <div class="form-check d-flex justify-content-between align-items-center">
+                            <div>
+                              <input class="form-check-input" type="checkbox" value="out-of-stock" id="outStock">
+                              <label class="form-check-label" for="outStock">Out of Stock</label>
+                            </div>
+                            <span class="badge">12</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <!-- Price Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                              data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <h4>Price</h4>
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse show" 
+                        aria-labelledby="headingTwo">
+                      <div class="accordion-body">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox">
+                          <label class="mb-3"> Under BDT 300</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox">
+                          <label class="mb-3"> BDT 300 - 500</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox">
+                          <label class="mb-3"> BDT 500 +</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Material Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button d-flex justify-content-between align-items-center" 
+                              type="button" 
+                              data-bs-toggle="collapse" 
+                              data-bs-target="#collapseThree" 
+                              aria-expanded="true" 
+                              aria-controls="collapseThree">
+                        <h4 class="mb-0">Material</h4>
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse show" 
+                        aria-labelledby="headingThree">
+                      <div class="accordion-body">
+
+                        <!-- Materials List with Counts -->
+                        <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="matCotton" value="cotton">
+                            <label class="form-check-label" for="matCotton">Cotton</label>
+                          </div>
+                          <span class="badge bg-light text-dark">12</span>
+                        </div>
+
+                        <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="matPolyester" value="polyester">
+                            <label class="form-check-label" for="matPolyester">Polyester</label>
+                          </div>
+                          <span class="badge bg-light text-dark">5</span>
+                        </div>
+
+                        <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="matWool" value="wool">
+                            <label class="form-check-label" for="matWool">Wool</label>
+                          </div>
+                          <span class="badge bg-light text-dark">7</span>
+                        </div>
+
+                        <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="matVelvet" value="velvet">
+                            <label class="form-check-label" for="matVelvet">Velvet</label>
+                          </div>
+                          <span class="badge bg-light text-dark">3</span>
+                        </div>
+                        <div class="form-check d-flex justify-content-between align-items-center mb-2"> 
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="matPlush" value="plush"> 
+                            <label class="form-check-label" for="matPlush">Plush</label>
+                          </div> 
+                          <span class="badge bg-light text-dark">4</span>
+                        </div> 
+                        <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                          <div>
+                            <input class="form-check-input" type="checkbox" id="matFoam" value="foam">
+                            <label class="form-check-label" for="matFoam">Foam</label>
+                          </div>
+                          <span class="badge bg-light text-dark">2</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Color Accordion -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button d-flex justify-content-between align-items-center" 
+                              type="button" 
+                              data-bs-toggle="collapse" 
+                              data-bs-target="#collapseFour" 
+                              aria-expanded="true" 
+                              aria-controls="collapseFour">
+                        <h4>Color</h4>
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse show" 
+                        aria-labelledby="headingFour">
+                      <div class="accordion-body d-flex flex-wrap gap-2">
+
+                        <!-- Color Swatches -->
+                        <div class="color-swatch bg-primary"></div>
+                        <div class="color-swatch bg-danger"></div>
+                        <div class="color-swatch bg-success"></div>
+                        <div class="color-swatch bg-warning"></div>
+                        <div class="color-swatch bg-info"></div>
+                        <div class="color-swatch bg-dark"></div>
+                        <div class="color-swatch bg-secondary"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </nav>
+
+              <!-- Offcanvas Sidebar for Mobile -->
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="blogSidebar">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title">Filter</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="accordion" id="shopAccordion">
+                    <!-- Availability Accordion -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <h4>Availability</h4>
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" 
+                          aria-labelledby="headingOne">
+                          <div class="accordion-body">
+                            <div class="form-check mb-3 d-flex justify-content-between align-items-center">
+                              <div>
+                                <input class="form-check-input" type="checkbox" value="in-stock" id="inStock">
+                                <label class="form-check-label" for="inStock">In Stock</label>
+                              </div>
+                              <span class="badge">12</span>
+                            </div>
+                            <div class="form-check d-flex justify-content-between align-items-center">
+                              <div>
+                                <input class="form-check-input" type="checkbox" value="out-of-stock" id="outStock">
+                                <label class="form-check-label" for="outStock">Out of Stock</label>
+                              </div>
+                              <span class="badge">12</span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                    <!-- Price Accordion -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          <h4>Price</h4>
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse show" 
+                          aria-labelledby="headingTwo">
+                        <div class="accordion-body">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="mb-3"> Under BDT 300</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="mb-3"> BDT 300 - 500</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox">
+                            <label class="mb-3"> BDT 500 +</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Material Accordion -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button d-flex justify-content-between align-items-center" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#collapseThree" 
+                                aria-expanded="true" 
+                                aria-controls="collapseThree">
+                          <h4 class="mb-0">Material</h4>
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse show" 
+                          aria-labelledby="headingThree">
+                        <div class="accordion-body">
+
+                          <!-- Materials List with Counts -->
+                          <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                              <input class="form-check-input" type="checkbox" id="matCotton" value="cotton">
+                              <label class="form-check-label" for="matCotton">Cotton</label>
+                            </div>
+                            <span class="badge bg-light text-dark">12</span>
+                          </div>
+
+                          <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                              <input class="form-check-input" type="checkbox" id="matPolyester" value="polyester">
+                              <label class="form-check-label" for="matPolyester">Polyester</label>
+                            </div>
+                            <span class="badge bg-light text-dark">5</span>
+                          </div>
+
+                          <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                              <input class="form-check-input" type="checkbox" id="matWool" value="wool">
+                              <label class="form-check-label" for="matWool">Wool</label>
+                            </div>
+                            <span class="badge bg-light text-dark">7</span>
+                          </div>
+
+                          <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                              <input class="form-check-input" type="checkbox" id="matVelvet" value="velvet">
+                              <label class="form-check-label" for="matVelvet">Velvet</label>
+                            </div>
+                            <span class="badge bg-light text-dark">3</span>
+                          </div>
+                          <div class="form-check d-flex justify-content-between align-items-center mb-2"> 
+                            <div>
+                              <input class="form-check-input" type="checkbox" id="matPlush" value="plush"> 
+                              <label class="form-check-label" for="matPlush">Plush</label>
+                            </div> 
+                            <span class="badge bg-light text-dark">4</span>
+                          </div> 
+                          <div class="form-check d-flex justify-content-between align-items-center mb-2">
+                            <div>
+                              <input class="form-check-input" type="checkbox" id="matFoam" value="foam">
+                              <label class="form-check-label" for="matFoam">Foam</label>
+                            </div>
+                            <span class="badge bg-light text-dark">2</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <!-- Color Accordion -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button d-flex justify-content-between align-items-center" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#collapseFour" 
+                                aria-expanded="true" 
+                                aria-controls="collapseFour">
+                          <h4>Color</h4>
+                        </button>
+                      </h2>
+                      <div id="collapseFour" class="accordion-collapse collapse show" 
+                          aria-labelledby="headingFour">
+                        <div class="accordion-body d-flex flex-wrap gap-2">
+
+                          <!-- Color Swatches -->
+                          <div class="color-swatch bg-primary"></div>
+                          <div class="color-swatch bg-danger"></div>
+                          <div class="color-swatch bg-success"></div>
+                          <div class="color-swatch bg-warning"></div>
+                          <div class="color-swatch bg-info"></div>
+                          <div class="color-swatch bg-dark"></div>
+                          <div class="color-swatch bg-secondary"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              <!-- Products Content -->
+              <main id="news" class="col-lg-9 col-md-12 col-sm-12 p-0 ps-lg-4">
+                <div class="row g-4">
+
+                  <!-- News card 1 -->
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#" class="product-card">
+                      <div class="product-img">
+                        <!-- Main Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
+                        <!-- Hover Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
+                        
+                        <!-- Overlay Icons -->
+                        <div class="product-overlay">
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Product Info -->
+                      <div class="product-info text-center mt-3">
+                        <h6 class="product-name">Wooden Toy Car</h6>
+                        <p class="product-price">BDT 350</p>
+                        <div class="product-colors">
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#" class="product-card">
+                      <div class="product-img">
+                        <!-- Main Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
+                        <!-- Hover Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
+                        
+                        <!-- Overlay Icons -->
+                        <div class="product-overlay">
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Product Info -->
+                      <div class="product-info text-center mt-3">
+                        <h6 class="product-name">Wooden Toy Car</h6>
+                        <p class="product-price">BDT 350</p>
+                        <div class="product-colors">
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#" class="product-card">
+                      <div class="product-img">
+                        <!-- Main Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
+                        <!-- Hover Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
+                        
+                        <!-- Overlay Icons -->
+                        <div class="product-overlay">
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Product Info -->
+                      <div class="product-info text-center mt-3">
+                        <h6 class="product-name">Wooden Toy Car</h6>
+                        <p class="product-price">BDT 350</p>
+                        <div class="product-colors">
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#" class="product-card">
+                      <div class="product-img">
+                        <!-- Main Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
+                        <!-- Hover Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
+                        
+                        <!-- Overlay Icons -->
+                        <div class="product-overlay">
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Product Info -->
+                      <div class="product-info text-center mt-3">
+                        <h6 class="product-name">Wooden Toy Car</h6>
+                        <p class="product-price">BDT 350</p>
+                        <div class="product-colors">
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#" class="product-card">
+                      <div class="product-img">
+                        <!-- Main Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
+                        <!-- Hover Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
+                        
+                        <!-- Overlay Icons -->
+                        <div class="product-overlay">
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Product Info -->
+                      <div class="product-info text-center mt-3">
+                        <h6 class="product-name">Wooden Toy Car</h6>
+                        <p class="product-price">BDT 350</p>
+                        <div class="product-colors">
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#" class="product-card">
+                      <div class="product-img">
+                        <!-- Main Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
+                        <!-- Hover Image -->
+                        <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
+                        
+                        <!-- Overlay Icons -->
+                        <div class="product-overlay">
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
+                          <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
+                        </div>
+                      </div>
+
+                      <!-- Product Info -->
+                      <div class="product-info text-center mt-3">
+                        <h6 class="product-name">Wooden Toy Car</h6>
+                        <p class="product-price">BDT 350</p>
+                        <div class="product-colors">
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
+                          <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                </div>
+              </main>
+
+            </div>
+          </div>
+      </div>
+    </section>
+  </main>
+
+
   
-  <!-- Categories -->
-  <section id="category" class="py-5">
-    <div class="container">
-      <div class="py-4">
-        <h2 class="section-title">Shop By Category</h2>
-      </div>
-      <div class="row g-4">
-        <!-- Swiper -->
-        <div class="swiper category-swiper">
-          <div class="swiper-wrapper mb-5">
-            <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_55.webp?v=1707907597" alt="Slide 1">
-              </div>
-              <div>
-                <h5>Squeaky Toys</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_54.webp?v=1707911082" alt="Slide 2">
-              </div>
-              <div>
-                <h5>Mealody Mates</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_56_40a87107-93da-40b2-843a-b0fb1374c630.webp?v=1707909116" alt="Slide 3">
-              </div>
-              <div>
-                <h5>Wooden Wonders</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_56_40a87107-93da-40b2-843a-b0fb1374c630_2.webp?v=1707909250" alt="Slide 4">
-              </div>
-              <div>
-                <h5>Pull Toys</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_58_1f692f2d-3ab0-472c-ade8-859384ec8e7b.webp?v=1707909344" alt="Slide 5">
-              </div>
-              <div>
-                <h5>Squeaky Toys</h5>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_55.webp?v=1707907597" alt="Slide 4">
-              </div>
-              <div>
-                <h5>Mealody Mates</h5>
-              </div>
-            </div>
-          </div>
-          <!-- Pagination container -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Cards -->
-   <section id="cards" class="py-3">
-    <div class="container">
-      <div class="swiper card-swiper" id="card-swiper">
-        <div class="swiper-wrapper mb-5">
-          <div class="swiper-slide">
-            <div class="grid-banner-block-image">
-              <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_5.jpg?v=1707907251" loading="lazy" alt="Image">
-            </div>    
-            <div class="grid-banner-content">
-              <div class="grid-banner-inner d-flex flex-column">
-                <h3 class="main-title">Wood toys for your kids</h3>
-                <p class="description">Get 20% flate your first purchase</p>
-                <div class="button-wrapper">
-                  <a href="/collections/teething-toys" class="shop-now-btn">Shop now</a>
-                </div>
-              </div> 
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid-banner-block-image">
-              <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_4.jpg?v=1707907251" loading="lazy" alt="Image">
-            </div>    
-            <div class="grid-banner-content ">
-                <div class="grid-banner-inner">
-                  <h3 class="main-title">Early black friday specials</h3>
-                  <p class="description">Get 20% flate your first purchase</p>
-                  <div class="button-wrapper">
-                    <a href="/collections/teething-toys" class="shop-now-btn">Shop now</a>
-                  </div>
-                </div> 
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="grid-banner-block-image">
-              <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_3.jpg?v=1707907252" loading="lazy" alt="Image">
-            </div>    
-            <div class="grid-banner-content ">
-                <div class="grid-banner-inner">
-                  <h3 class="main-title">The best thing for kids</h3>
-                  <p class="description">Get 20% flate your first purchase</p>
-                  <div class="button-wrapper">
-                    <a href="/collections/teething-toys" class="shop-now-btn">Shop now</a>
-                  </div>
-                </div> 
-            </div>
-          </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </div>
-   </section>
-
-   <!-- Shop by age -->
-  <section id="age" class="pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="heading">
-          <h2 class="section-title">Shop By Age</h2>
-        </div>
-        <div class="row">
-          <!-- Swiper -->
-          <div class="swiper age-swiper">
-            <div class="swiper-wrapper mb-5">
-              <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
-                  <div class="grid-banner-block-image one">
-                    <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
-                  </div>    
-                  <div class="grid-banner-content ">
-                      <div class="grid-banner-inner text-center">
-                        <h4 class="main-title ">0 - 12</h4>
-                        <p class="description">Months</p>
-                      </div> 
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
-                  <div class="grid-banner-block-image two">
-                    <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
-                  </div>    
-                  <div class="grid-banner-content ">
-                      <div class="grid-banner-inner text-center">
-                        <h4 class="main-title ">1 - 2</h4>
-                        <p class="description">Years</p>
-                      </div> 
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
-                  <div class="grid-banner-block-image three">
-                    <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
-                  </div>    
-                  <div class="grid-banner-content ">
-                      <div class="grid-banner-inner text-center">
-                        <h4 class="main-title ">3+</h4>
-                        <p class="description">Years</p>
-                      </div> 
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
-                  <div class="grid-banner-block-image four">
-                    <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
-                  </div>    
-                  <div class="grid-banner-content ">
-                      <div class="grid-banner-inner text-center">
-                        <h4 class="main-title ">5+</h4>
-                        <p class="description">Years</p>
-                      </div> 
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
-                  <div class="grid-banner-block-image five">
-                    <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
-                  </div>    
-                  <div class="grid-banner-content ">
-                      <div class="grid-banner-inner text-center">
-                        <h4 class="main-title ">10+</h4>
-                        <p class="description">Years</p>
-                      </div> 
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- Pagination container -->
-            <div class="swiper-pagination pt-4"></div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Top picks -->
-   <section id="top-picks" class="py-3 py-lg-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="banner h-100">
-            <div class="banner-wrapper mb-3 mb-lg-5 text-center d-flex flex-column justify-content-center align-items-center">
-              <h1 class="banner-heading mb-2">Special Offer</h1>
-              <p class="mb-3">Praesent tristique magna sit amet purus gravida quis blandit.</p>
-              <a class="shop-now-btn">Shop now</a>
-            </div>
-            <div id="countdown" class="d-flex justify-content-center align-items-center">
-              <div class="time-box text-center">
-                <p id="days">00</p>
-                <small>Days</small>
-              </div>
-              <div class="time-box text-center">
-                <p id="hours">00</p>
-                <small>Hrs</small>
-              </div>
-              <div class="time-box text-center">
-                <p id="minutes">00</p>
-                <small>Mins</small>
-              </div>
-              <div class="time-box text-center">
-                <p id="seconds">00</p>
-                <small>Secs</small>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <div class="grouped-card">
-            <div class="grouped-content text-left p-2 mb-4 mb-lg-5">
-              <h3 class="banner-heading">Top Picks For Youngsters</h3>
-              <p> Justo eget magna fermentum iaculis.</p>
-            </div>
-            <div class="row g-4">
-              <!-- Card 1 -->
-              <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
-                  <div class="product-img">
-                    <!-- Main Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
-                    <!-- Hover Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
-                    
-                    <!-- Overlay Icons -->
-                    <div class="product-overlay">
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                    </div>
-                  </div>
-
-                  <!-- Product Info -->
-                  <div class="product-info text-center mt-3">
-                    <h6 class="product-name">Wooden Toy Car</h6>
-                    <p class="product-price">BDT 350</p>
-                    <div class="product-colors">
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
-                  <div class="product-img">
-                    <!-- Main Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
-                    <!-- Hover Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
-                    
-                    <!-- Overlay Icons -->
-                    <div class="product-overlay">
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                    </div>
-                  </div>
-
-                  <!-- Product Info -->
-                  <div class="product-info text-center mt-3">
-                    <h6 class="product-name">Wooden Toy Car</h6>
-                    <p class="product-price">BDT 530</p>
-                    <div class="product-colors">
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
-                  <div class="product-img">
-                    <!-- Main Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-7_a226c59c-0420-482f-a227-3095e07ecca8.jpg?v=1706620840" alt="Product Front" class="main-img img-fluid">
-                    <!-- Hover Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-18_4d2af2ef-1c45-486b-bc9f-7b73d8d0d628.jpg?v=1706620840&width=360" alt="Product Back" class="hover-img img-fluid">
-                    
-                    <!-- Overlay Icons -->
-                    <div class="product-overlay">
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                    </div>
-                  </div>
-
-                  <!-- Product Info -->
-                  <div class="product-info text-center mt-3">
-                    <h6 class="product-name">Wooden Toy Car</h6>
-                    <p class="product-price">BDT 380</p>
-                    <div class="product-colors">
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
-                  <div class="product-img">
-                    <!-- Main Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
-                    <!-- Hover Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
-                    
-                    <!-- Overlay Icons -->
-                    <div class="product-overlay">
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                    </div>
-                  </div>
-
-                  <!-- Product Info -->
-                  <div class="product-info text-center mt-3">
-                    <h6 class="product-name">Wooden Toy Car</h6>
-                    <p class="product-price">BDT 350</p>
-                    <div class="product-colors">
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Card 5 -->
-              <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
-                  <div class="product-img">
-                    <!-- Main Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
-                    <!-- Hover Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Back" class="hover-img img-fluid">
-                    
-                    <!-- Overlay Icons -->
-                    <div class="product-overlay">
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                    </div>
-                  </div>
-
-                  <!-- Product Info -->
-                  <div class="product-info text-center mt-3">
-                    <h6 class="product-name">Wooden Toy Car</h6>
-                    <p class="product-price">BDT 530</p>
-                    <div class="product-colors">
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Card 6 -->
-              <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
-                  <div class="product-img">
-                    <!-- Main Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-7_a226c59c-0420-482f-a227-3095e07ecca8.jpg?v=1706620840" alt="Product Front" class="main-img img-fluid">
-                    <!-- Hover Image -->
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-18_4d2af2ef-1c45-486b-bc9f-7b73d8d0d628.jpg?v=1706620840&width=360" alt="Product Back" class="hover-img img-fluid">
-                    
-                    <!-- Overlay Icons -->
-                    <div class="product-overlay">
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                      <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                    </div>
-                  </div>
-
-                  <!-- Product Info -->
-                  <div class="product-info text-center mt-3">
-                    <h6 class="product-name">Wooden Toy Car</h6>
-                    <p class="product-price">BDT 380</p>
-                    <div class="product-colors">
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                      <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-
-   <!-- Middle banner -->
-   <section class=" py-3 py-lg-5">
-    <div class="container-fluid px-4">
-      <div>
-        <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Rectangle_7.jpg?v=1707907252" class="img-fluid rounded-3" alt="">
-      </div>
-    </div>
-   </section>
-
-   <!-- The unique appeal -->
-   <section id="unique-appeal" class="py-3 py-lg-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex">
-          <div class="d-flex justify-content-center align-items-center w-100">
-            <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Mask_group_3514798e-7d90-4144-a900-c6b97e546f20.png?v=1707983159" class="img-fluid w-75" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="mb-5 pb-0 pb-lg-3">
-            <h3>The Unique Appeal Of Toy Time Toys & Games</h3>
-          </div>
-          <div class="mb-4">
-            <div class="d-flex justify-content-start align-items-center gap-3">
-              <div class="bg-light rounded-4 p-3">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141026.png?v=1707983157" class="img-fluid" alt="">
-              </div>
-              <div>
-                <h4>Exclusive Toy Collections</h4>
-                <p>Enim diam vulputate ut pharetra. Adipiscing elit pellentesque habitant morbi tristique.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="mb-4">
-            <div class="d-flex justify-content-start align-items-center gap-3">
-              <div class="bg-light rounded-4 p-3">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141027.png?v=1707983157" class="img-fluid" alt="">
-              </div>
-              <div>
-                <h4>Exclusive Toy Collections</h4>
-                <p>Enim diam vulputate ut pharetra. Adipiscing elit pellentesque habitant morbi tristique.</p>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="d-flex justify-content-start align-items-center gap-3">
-              <div class="bg-light rounded-4 p-3">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Layer_1_4818643e-2a05-4b26-8654-e6fab905dd6d.png?v=1707983157" class="img-fluid" alt="">
-              </div>
-              <div>
-                <h4>Exclusive Toy Collections</h4>
-                <p>Enim diam vulputate ut pharetra. Adipiscing elit pellentesque habitant morbi tristique.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-
-   <!-- New Arrival -->
-    <section class="py-3 py-lg-5">
-      <div class="container">
-        <div class="mb-3 text-center mb-4 mb-lg-5">
-          <h3 class="section-title">New Arrivals</h3>
-          <p>Cras dictum metus in uam vulpu commodo.</p>
-        </div>
-      <div>
-        <div class="swiper newarrival-swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="hover-img img-fluid">
-                  
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="hover-img img-fluid">
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-10_eb50b7fb-ae89-4cb7-b4d1-19da2de33a2f.jpg?v=1706620815" alt="Product Front" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15.jpg?v=1706620815" alt="Product Back" class="hover-img img-fluid">
-                  
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="hover-img img-fluid">
-                  
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="hover-img img-fluid">
-                  
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="hover-img img-fluid">
-                  
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="#" class="product-card">
-                <div class="product-img">
-                  <!-- Main Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
-                  <!-- Hover Image -->
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="hover-img img-fluid">
-                  
-                  <!-- Overlay Icons -->
-                  <div class="product-overlay">
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Wishlist"><i class="bi bi-heart"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Compare"><i class="bi bi-shuffle"></i></button>
-                    <button class="icon-btn" data-bs-toggle="tooltip" title="Add to Cart"><i class="bi bi-cart"></i></button>
-                  </div>
-                </div>
-
-                <!-- Product Info -->
-                <div class="product-info text-center mt-3">
-                  <h6 class="product-name">Wooden Toy Car</h6>
-                  <p class="product-price">BDT <span>350</span></p>
-                  <div class="product-colors">
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="White" style="background-color:#ffffff;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Red" style="background-color:#c0392b;"></span>
-                    <span class="color-swatch" data-bs-toggle="tooltip" title="Green" style="background-color:#2980b9;"></span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            
-            
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-
-    <!-- greatest prices and deals -->
-    <section class="py-4 py-lg-5">
-      <div id="offer-card" class="container">
-        <div class="row px-2 px-lg-0">
-          <div class="offer-card h-100 rounded-3">
-            <div class="text-center py-5">
-              <h3 class="mb-3">Greatest prices and deals save 20% off baby</h3>
-              <a class="shop-now-btn" href="#">Show now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Latest news -->
-    <section id="news" class="py-3 py-lg-5">
-      <div class="container">
-        <div class="heading text-left mb-4 mb-lg-5">
-          <h2 class="mb-2">Latest News</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quod!</p>
-        </div>
-        <div class="swiper news-swiper">
-          <div class="swiper-wrapper mb-5 mb-lg-0">
-            
-            <!-- News Card 1 -->
-            <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
-                <div class="news-card d-flex flex-column justify-content-start align-items-start">
-                  <div class="card-img mb-3">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_11.png?v=1707903600" class="card-img-top rounded-4" alt="News">
-                  </div>
-                  <div class="card-body h-100">
-                    <p class="text-muted mb-2 small">By John Doe • Aug 20, 2025</p>
-                    <h5 class="card-title mb-2">How Do Toys Impact a Child's Learning</h5>
-                    <p class="card-text text-truncate-3 mb-3">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget sapien vitae erat tincidunt aliquam sit amet in erat. 
-                    </p>
-                  </div>
-                  <a href="#" class="shop-now-btn">Read More</a>
-                </div>
-              </a>
-            </div>
-
-            <!-- News Card 2 -->
-            <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
-                <div class="news-card d-flex flex-column justify-content-start align-items-start">
-                  <div class="card-img mb-3">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_7.png?v=1707903576" class="card-img-top rounded-4" alt="News">
-                  </div>
-                  <div class="card-body">
-                    <p class="text-muted mb-2 small">By Sarah Smith • Aug 18, 2025</p>
-                    <h5 class="card-title mb-2">The Joys of Being a Parents: A Guide to Parenting</h5>
-                    <p class="card-text text-truncate-3 mb-3">
-                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
-                    </p>
-                    <a href="#" class="shop-now-btn">Read More</a>
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            <!-- News Card 3 -->
-            <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
-                <div class="news-card d-flex flex-column justify-content-start align-items-start">
-                <div class="card-img mb-3">
-                  <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_8.png?v=1707903589" class="card-img-top rounded-4" alt="News">
-                </div>
-                <div class="card-body">
-                  <p class="text-muted mb-2 small">By Alex Lee • Aug 15, 2025</p>
-                  <h5 class="card-title mb-2">Build Worlds, Collect Pieces With Your Young Ones</h5>
-                  <p class="card-text text-truncate-3 mb-3">
-                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                  </p>
-                  <a href="#" class="shop-now-btn">Read More</a>
-                </div>
-              </div>
-              </a>
-            </div>
-
-            <!-- News Card 4 -->
-            <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
-                <div class="news-card d-flex flex-column justify-content-start align-items-start">
-                  <div class="card-img mb-3">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_3.png?v=1707903612" class="card-img-top rounded-4" alt="News">
-                  </div>
-                  <div class="card-body h-100">
-                    <p class="text-muted mb-2 small">By John Doe • Aug 20, 2025</p>
-                    <h5 class="card-title mb-2">What Are the Best Toys For Child Development</h5>
-                    <p class="card-text text-truncate-3 mb-3">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget sapien vitae erat tincidunt aliquam sit amet in erat. 
-                    </p>
-                  </div>
-                  <a href="#" class="shop-now-btn">Read More</a>
-                </div>
-              </a>
-            </div>
-
-          </div>
-
-          <!-- Pagination -->
-          <div class="swiper-pagination mt-3 pt-5 d-block d-lg-none"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Top brands -->
-     <section class="py-3 py-lg-5">
-      <div class="container">
-        <div class="heading text-center mb-4">
-          <h2 class="section-title">Top Brands</h2>
-        </div>
-        <div class="row px-3 px-lg-0">
-          <!-- Swiper -->
-          <div class="swiper brands-swiper">
-            <div class="swiper-wrapper mb-5">
-              <div class="swiper-slide">
-                <a href="#" class="text-decoration-none">
-                  <div class="slide-item">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141017.png?v=1707910333" class="img-fluid w-50" loading="lazy" width="346" height="226" alt="Slide 1">
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="text-decoration-none">
-                  <div class="slide-item">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141015_89c3309e-c489-48a2-ba80-e48fbd8d68f1.png?v=1707910333" class="img-fluid w-50" loading="lazy" width="346" height="226" alt="Slide 2">
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="text-decoration-none">
-                  <div class="slide-item">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141016.png?v=1707910332" class="img-fluid w-50" loading="lazy" width="346" height="226" alt="Slide 3">
-                  </div>
-                </a>
-              </div>
-
-              <div class="swiper-slide">
-                <a href="#" class="text-decoration-none">
-                  <div class="slide-item">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141017.png?v=1707910333" class="img-fluid w-50" loading="lazy" width="346" height="226" alt="Slide 1">
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="text-decoration-none">
-                  <div class="slide-item">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141015_89c3309e-c489-48a2-ba80-e48fbd8d68f1.png?v=1707910333" class="img-fluid w-50" loading="lazy" width="346" height="226" alt="Slide 2">
-                  </div>
-                </a>
-              </div>
-              <div class="swiper-slide">
-                <a href="#" class="text-decoration-none">
-                  <div class="slide-item">
-                    <img src="https://toytime-theme.myshopify.com/cdn/shop/files/Group_141016.png?v=1707910332" class="img-fluid w-50" loading="lazy" width="346" height="226" alt="Slide 3">
-                  </div>
-                </a>
-              </div>
-              
-              
-            </div>
-          </div>
-        </div>
-      </div>
-     </section>
-
-     <!-- Footer -->
+    <!-- Footer -->
     <footer id="banner-footer" class="px-2 px-lg-4 rounded-3">
       <!-- Bootstrap Icons -->
 
@@ -1660,6 +1133,7 @@
       </div>
     </button>
 
+  
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -1669,7 +1143,9 @@
   <!-- Custom js -->
   <script src="js/script.js"></script>
 
+  <!-- Swiper Slider JS -->
   <script src="js/swiper_scripts.js"></script>
+
 
 </body>
 </html>
