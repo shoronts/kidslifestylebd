@@ -165,5 +165,73 @@ const cardSwiper = new Swiper('.card-swiper', {
       }
     });
 
+    // About page / Fabrics slider
+const fabricsSwiper = new Swiper('.fabrics-swiper', {
+  loop: false,
+  spaceBetween: 20,
+  pagination: {
+    el: '.card-swiper .swiper-pagination', 
+    clickable: true,
+  },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 1 },   // small devices
+    575: { slidesPerView: 2 },
+    768: { slidesPerView: 2 },   // tablets
+    992: { slidesPerView: 3 },   // desktops
+  }
+});
+
+// About page // Testimonials
+var testimonialSwiper = new Swiper(".testimonialSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  });
+
+  // About page / Our team slider
+const ourTeamSwiper = new Swiper('.our-team-swiper', {
+  loop: false,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2 },   // small devices
+    575: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },   // tablets
+    992: { slidesPerView: 4 },   // desktops
+  }
+});
+
+// About page / Social slider
+const socialSwiper = new Swiper('.social-swiper', {
+  loop: false,
+  spaceBetween: 20,
+  
+  // autoplay: {
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
+  breakpoints: {
+    320: { slidesPerView: 2 },   // small devices
+    575: { slidesPerView: 2 },
+    768: { slidesPerView: 3 },   // tablets
+    992: { slidesPerView: 4 },   // desktops
+  }
+});
+
 
     

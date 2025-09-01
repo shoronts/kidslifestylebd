@@ -61,7 +61,10 @@
   #singleProduct .single-product-img{
     height:100%;
   }
-  
+  /* About page // Fabrics Slider  */
+  #fabrics .row{
+    padding:30px;
+  }
 }
 
 /* Small devices (landscape phones, ≥576px) */
@@ -118,6 +121,10 @@
     height:100%;
     margin-bottom: 50px;
   }
+  /* About page // Fabrics Slider  */
+  #fabrics .row{
+    padding:30px;
+  }
     
 }
 
@@ -162,6 +169,10 @@
   .productThumbs .swiper-button-prev {
     opacity: 1;
   }
+  /* About page // Fabrics Slider  */
+  #fabrics .row{
+    padding:40px;
+  }
 }
 
 /* Large devices (desktops, ≥992px) */
@@ -183,6 +194,12 @@
   .productThumbs .swiper-button-next,
   .productThumbs .swiper-button-prev {
     opacity: 0;
+  }
+  /* About page */
+  #fabrics .row{
+    padding:50px 60px;
+    background-color: var(--light-color);
+    border-radius: 20px;
   }
 }
 
