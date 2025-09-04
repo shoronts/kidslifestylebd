@@ -8,11 +8,7 @@
         delay: 3000,
         disableOnInteraction: false,
       },
-      effect: 'slide',   // default effect (simple sliding)
-      // effect: 'fade',  // cross-fade transition
-      // effect: 'cube',  // 3D cube
-      // effect: 'coverflow', // 3D coverflow
-      // effect: 'flip',  // flipping card effect
+      effect: 'slide',
     });
 
     // Category
@@ -97,23 +93,23 @@ const cardSwiper = new Swiper('.card-swiper', {
     }
   });
 
-  // Brands swiper
+  // Home page // Brands swiper
     const brandsSwiper = new Swiper('.brands-swiper', {
-        slidesPerView: 2, // default for very small screens
+        slidesPerView: 2, 
         spaceBetween: 30,
         loop: true,
         breakpoints: {
-          480: { slidesPerView: 2 },   // small mobile
-          768: { slidesPerView: 3 },   // tablet
-          992: { slidesPerView: 4 },   // small desktop
-          1200: { slidesPerView: 5 },  // large desktop
+          480: { slidesPerView: 2 },   
+          768: { slidesPerView: 3 },   
+          992: { slidesPerView: 4 },   
+          1200: { slidesPerView: 5 },  
         }
     });
 
 
-  // Init Swiper
+  // Single product page // Product image thumbs
   const thumbSwiper = new Swiper(".productThumbs", {
-    direction: "vertical", // default vertical
+    direction: "vertical", 
     slidesPerView: 3,
     spaceBetween: 20,
     breakpoints: {
@@ -144,7 +140,6 @@ const cardSwiper = new Swiper('.card-swiper', {
   });
 
   // Single product page // Reccomended products
-  // New arrival 
     const reccomendedSwiper = new Swiper('.reccomended-swiper', {
         slidesPerView: 1, // default for very small screens
         spaceBetween: 30,
@@ -190,10 +185,6 @@ var testimonialSwiper = new Swiper(".testimonialSwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
     autoplay: {
     delay: 2000,
     disableOnInteraction: false,
@@ -220,11 +211,10 @@ const ourTeamSwiper = new Swiper('.our-team-swiper', {
 const socialSwiper = new Swiper('.social-swiper', {
   loop: false,
   spaceBetween: 20,
-  
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     320: { slidesPerView: 2 },   // small devices
     575: { slidesPerView: 2 },

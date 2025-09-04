@@ -65,6 +65,10 @@
   #fabrics .row{
     padding:30px;
   }
+  /* Scroll to top btn */
+  #btnBackToTop {
+    bottom: 60px!important;
+  }
 }
 
 /* Small devices (landscape phones, ≥576px) */
@@ -124,6 +128,10 @@
   /* About page // Fabrics Slider  */
   #fabrics .row{
     padding:30px;
+  }
+  /* Scroll to top btn */
+  #btnBackToTop {
+    bottom: 60px!important;
   }
     
 }

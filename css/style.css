@@ -81,7 +81,9 @@
 
 .mobile-bottom-navbar{
   z-index: 2;
+  position: sticky;
 }
+
  /* Home page Hero Section */
 .hero-section {
   min-height: 80vh;
