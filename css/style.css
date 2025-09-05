@@ -80,7 +80,7 @@
 }
 
 .mobile-bottom-navbar{
-  z-index: 2;
+  z-index: 999;
   position: sticky;
 }
 
@@ -314,7 +314,7 @@
   right: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;

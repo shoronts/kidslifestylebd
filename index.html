@@ -189,6 +189,12 @@
         bottom: -25px;
       }
     }
+    @media (max-width: 575px) {
+      .hero-section::after {
+        height: 280px;
+        bottom: -10px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -196,7 +202,7 @@
   <div class="top-header py-2 border-bottom">
     <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center small">
       <!-- Left: Contact Info -->
-      <div class="d-flex gap-3 mb-3 mb-lg-0">
+      <div class="d-flex flex-column flex-lg-row flex-md-row gap-3 mb-3 mb-lg-0">
         <a href="mailto:info@example.com" class="text-decoration-none d-flex align-items-center">
           <svg class="me-2" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1174_850)">
@@ -266,8 +272,8 @@
             <i class="bi bi-list fs-2"></i>
           </button>
           <!-- Logo -->
-          <a class="navbar-brand brand-text text-dark mb-0" href="index.html">
-            <img src="assets/images/logo/logo.png" alt="kids lifestyle logo">
+          <a class="navbar-brand brand-text text-dark mb-0" href="../index.html">
+            <img src="../assets/images/logo/logo.png" alt="kids lifestyle logo">
           </a>
         </div>
         <!-- Right icons -->
@@ -281,7 +287,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="d-none d-md-block d-lg-block">
             <a href="#" class="icon-link">
               <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.74634 7.57388C1.36639 4.80307 3.14298 2.06756 5.92221 1.77812C8.01895 1.55928 9.87646 2.70291 10.7173 4.43246C10.9178 4.84544 11.4736 4.84544 11.6742 4.43246C12.515 2.70291 14.3725 1.55928 16.4692 1.77812C19.2484 2.06756 21.0215 4.80307 20.6451 7.57388C19.7621 14.0368 11.1957 19.7513 11.1957 19.7513C11.1957 19.7513 2.62936 14.0368 1.74634 7.57388Z" stroke="currentcolor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -296,7 +302,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="d-none d-md-block d-lg-block">
             <a href="#" class="icon-link">
               <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10.0234 19.7513C14.994 19.7513 19.0234 15.7219 19.0234 10.7513C19.0234 5.78078 14.994 1.75134 10.0234 1.75134C5.05288 1.75134 1.02344 5.78078 1.02344 10.7513C1.02344 15.7219 5.05288 19.7513 10.0234 19.7513Z" stroke="currentcolor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -313,11 +319,11 @@
         <!-- Left nav links -->
         <ul class="navbar-nav flex-row gap-3">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="../index.html">Home</a>
           </li>
           <!-- Shop Mega Menu -->
           <li class="nav-item dropdown position-static">
-            <a class="nav-link" href="shop.html">
+            <a class="nav-link" href="../shop.html">
               Shop <i class="bi bi-plus fw-bold"></i>
             </a>
 
@@ -379,19 +385,19 @@
           <!-- End Mega Menu -->
 
           <li class="nav-item">
-            <a class="nav-link" href="blogs.html">Blog</a>
+            <a class="nav-link" href="../blogs.html">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="../about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="../contact.html">Contact</a>
           </li>
         </ul>
 
         <!-- Logo centered -->
-        <a class="navbar-brand brand-text text-dark mb-0" href="index.html">
-          <img class="img-fluid" src="assets/images/logo/logo.png" alt="kids lifestyle logo">
+        <a class="navbar-brand brand-text text-dark mb-0" href="../index.html">
+          <img class="img-fluid" src="../assets/images/logo/logo.png" alt="kids lifestyle logo">
         </a>
 
         <!-- Right icons -->
@@ -536,7 +542,7 @@
                     <h4 class="text-uppercase fs-6 dark-color mb-2 mb-lg-4">Seasonal Sale - up to 30% Off</h4>
                     <h1 class="text dark-color mb-2 mb-lg-4">Babies Soft Toys</h1>
                     <p class="fs-6 text dark-color mb-2 mb-lg-4">Price from BDT 570/-</p>
-                    <a class="shop-now-btn" href="">Shop now</a>
+                    <a class="shop-now-btn" href="shop/baby-owl.html">Shop now</a>
                   </div>
                 </div>
               </div>
@@ -559,7 +565,7 @@
                     <h4 class="text-uppercase fs-6 dark-color mb-2 mb-lg-4">Seasonal Sale - up to 30% Off</h4>
                     <h1 class="text dark-color mb-2 mb-lg-4">Blankie Buddies</h1>
                     <p class="fs-6 text dark-color mb-2 mb-lg-4">Price from BDT 550/-</p>
-                    <a class="shop-now-btn" href="">Shop now</a>
+                    <a class="shop-now-btn" href="shop/baby-owl.html">Shop now</a>
                   </div>
                 </div>
               </div>
@@ -582,7 +588,7 @@
                     <h4 class="text-uppercase fs-6 dark-color mb-2 mb-lg-4">Seasonal Sale - up to 30% Off</h4>
                     <h1 class="text dark-color mb-2 mb-lg-4">Plush Animals</h1>
                     <p class="fs-6 text dark-color mb-2 mb-lg-4">Price from BDT 540/-</p>
-                    <a class="shop-now-btn" href="">Shop now</a>
+                    <a class="shop-now-btn" href="shop/baby-owl.html">Shop now</a>
                   </div>
                 </div>
               </div>
@@ -605,52 +611,64 @@
         <div class="swiper category-swiper">
           <div class="swiper-wrapper mb-5">
             <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_55.webp?v=1707907597" alt="Slide 1">
-              </div>
-              <div>
-                <h5>Squeaky Toys</h5>
-              </div>
+              <a href="shop.html" class="text-center text-decoration-none">
+                <div class="slide-item">
+                  <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_55.webp?v=1707907597" alt="Slide 1">
+                </div>
+                <div>
+                  <h5 class="dark-color">Squeaky Toys</h5>
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_54.webp?v=1707911082" alt="Slide 2">
-              </div>
-              <div>
-                <h5>Mealody Mates</h5>
-              </div>
+              <a href="shop.html" class="text-center text-decoration-none">
+                <div class="slide-item">
+                  <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_54.webp?v=1707911082" alt="Slide 2">
+                </div>
+                <div>
+                  <h5 class="dark-color">Mealody Mates</h5>
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_56_40a87107-93da-40b2-843a-b0fb1374c630.webp?v=1707909116" alt="Slide 3">
-              </div>
-              <div>
-                <h5>Wooden Wonders</h5>
-              </div>
+              <a href="shop.html" class="text-center text-decoration-none">
+                <div class="slide-item">
+                  <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_56_40a87107-93da-40b2-843a-b0fb1374c630.webp?v=1707909116" alt="Slide 3">
+                </div>
+                <div>
+                  <h5 class="dark-color">Wooden Wonders</h5>
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_56_40a87107-93da-40b2-843a-b0fb1374c630_2.webp?v=1707909250" alt="Slide 4">
-              </div>
-              <div>
-                <h5>Pull Toys</h5>
-              </div>
+              <a href="shop.html" class="text-center text-decoration-none">
+                <div class="slide-item">
+                  <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_56_40a87107-93da-40b2-843a-b0fb1374c630_2.webp?v=1707909250" alt="Slide 4">
+                </div>
+                <div>
+                  <h5 class="dark-color">Pull Toys</h5>
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_58_1f692f2d-3ab0-472c-ade8-859384ec8e7b.webp?v=1707909344" alt="Slide 5">
-              </div>
-              <div>
-                <h5>Squeaky Toys</h5>
-              </div>
+              <a href="shop.html" class="text-center text-decoration-none">
+                <div class="slide-item">
+                  <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_58_1f692f2d-3ab0-472c-ade8-859384ec8e7b.webp?v=1707909344" alt="Slide 5">
+                </div>
+                <div>
+                  <h5 class="dark-color">Squeaky Toys</h5>
+                </div>
+              </a>
             </div>
             <div class="swiper-slide">
-              <div class="slide-item">
-                <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_55.webp?v=1707907597" alt="Slide 4">
-              </div>
-              <div>
-                <h5>Mealody Mates</h5>
-              </div>
+              <a href="shop.html" class="text-center text-decoration-none">
+                <div class="slide-item">
+                  <img src="https://toytime-theme.myshopify.com/cdn/shop/collections/Ellipse_55.webp?v=1707907597" alt="Slide 4">
+                </div>
+                <div>
+                  <h5 class="dark-color">Mealody Mates</h5>
+                </div>
+              </a>
             </div>
           </div>
           <!-- Pagination container -->
@@ -675,7 +693,7 @@
                 <h3 class="main-title">Wood toys for your kids</h3>
                 <p class="description">Get 20% flate your first purchase</p>
                 <div class="button-wrapper">
-                  <a href="/collections/teething-toys" class="shop-now-btn">Shop now</a>
+                  <a href="shop.html" class="shop-now-btn">Shop now</a>
                 </div>
               </div> 
             </div>
@@ -689,7 +707,7 @@
                   <h3 class="main-title">Early black friday specials</h3>
                   <p class="description">Get 20% flate your first purchase</p>
                   <div class="button-wrapper">
-                    <a href="/collections/teething-toys" class="shop-now-btn">Shop now</a>
+                    <a href="shop.html" class="shop-now-btn">Shop now</a>
                   </div>
                 </div> 
             </div>
@@ -703,7 +721,7 @@
                   <h3 class="main-title">The best thing for kids</h3>
                   <p class="description">Get 20% flate your first purchase</p>
                   <div class="button-wrapper">
-                    <a href="/collections/teething-toys" class="shop-now-btn">Shop now</a>
+                    <a href="shop.html" class="shop-now-btn">Shop now</a>
                   </div>
                 </div> 
             </div>
@@ -728,7 +746,7 @@
           <div class="swiper age-swiper">
             <div class="swiper-wrapper mb-5">
               <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
+                <a class="text-black age-card-link" href="shop.html">
                   <div class="grid-banner-block-image one">
                     <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
                   </div>    
@@ -741,7 +759,7 @@
                 </a>
               </div>
               <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
+                <a class="text-black age-card-link" href="shop.html">
                   <div class="grid-banner-block-image two">
                     <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
                   </div>    
@@ -754,7 +772,7 @@
                 </a>
               </div>
               <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
+                <a class="text-black age-card-link" href="shop.html">
                   <div class="grid-banner-block-image three">
                     <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
                   </div>    
@@ -767,7 +785,7 @@
                 </a>
               </div>
               <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
+                <a class="text-black age-card-link" href="shop.html">
                   <div class="grid-banner-block-image four">
                     <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
                   </div>    
@@ -780,7 +798,7 @@
                 </a>
               </div>
               <div class="swiper-slide d-flex justify-content-center flex-column align-items-center">
-                <a class="text-black age-card-link" href="#">
+                <a class="text-black age-card-link" href="shop.html">
                   <div class="grid-banner-block-image five">
                     <img class="grid-banner-image img-fluid" src="https://toytime-theme.myshopify.com/cdn/shop/files/A_A_A_A__1.png?v=1707981036" loading="lazy" alt="Image">
                   </div>    
@@ -843,7 +861,7 @@
             <div class="row g-4">
               <!-- Card 1 -->
               <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
+                <a href="shop/baby-owl.html" class="product-card">
                   <div class="product-img">
                     <!-- Main Image -->
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
@@ -873,7 +891,7 @@
 
               <!-- Card 2 -->
               <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
+                <a href="shop/baby-owl.html" class="product-card">
                   <div class="product-img">
                     <!-- Main Image -->
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
@@ -903,7 +921,7 @@
 
               <!-- Card 3 -->
               <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
+                <a href="shop/baby-owl.html" class="product-card">
                   <div class="product-img">
                     <!-- Main Image -->
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-7_a226c59c-0420-482f-a227-3095e07ecca8.jpg?v=1706620840" alt="Product Front" class="main-img img-fluid">
@@ -933,7 +951,7 @@
 
               <!-- Card 4 -->
               <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
+                <a href="shop/baby-owl.html" class="product-card">
                   <div class="product-img">
                     <!-- Main Image -->
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-5.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
@@ -963,7 +981,7 @@
 
               <!-- Card 5 -->
               <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
+                <a href="shop/baby-owl.html" class="product-card">
                   <div class="product-img">
                     <!-- Main Image -->
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-1.jpg?v=1706620888" alt="Product Front" class="main-img img-fluid">
@@ -993,7 +1011,7 @@
 
               <!-- Card 6 -->
               <div class="col-6 col-md-6 col-lg-4">
-                <a href="#" class="product-card">
+                <a href="shop/baby-owl.html" class="product-card">
                   <div class="product-img">
                     <!-- Main Image -->
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-7_a226c59c-0420-482f-a227-3095e07ecca8.jpg?v=1706620840" alt="Product Front" class="main-img img-fluid">
@@ -1099,7 +1117,7 @@
         <div class="swiper newarrival-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
@@ -1128,7 +1146,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/Image4_2_61293336-a4fc-4b32-be52-0dd3d831b785.jpg?v=1706620774" alt="Product Back" class="main-img img-fluid">
@@ -1156,7 +1174,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-10_eb50b7fb-ae89-4cb7-b4d1-19da2de33a2f.jpg?v=1706620815" alt="Product Front" class="main-img img-fluid">
@@ -1185,7 +1203,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
@@ -1214,7 +1232,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
@@ -1243,7 +1261,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
@@ -1272,7 +1290,7 @@
             </div>
 
             <div class="swiper-slide">
-              <a href="#" class="product-card">
+              <a href="shop/baby-owl.html" class="product-card">
                 <div class="product-img">
                   <!-- Main Image -->
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/products/shop-15_e49e7fac-51ea-4a59-b326-955e36b7cc98.jpg?v=1706620774" alt="Product Front" class="main-img img-fluid">
@@ -1333,7 +1351,7 @@
             
             <!-- News Card 1 -->
             <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
+              <a href="blogs/the-passion-of-love-while-celebrating.html" class="text-decoration-none">
                 <div class="news-card d-flex flex-column justify-content-start align-items-start">
                   <div class="card-img mb-3">
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_11.png?v=1707903600" class="card-img-top rounded-4" alt="News">
@@ -1345,14 +1363,14 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget sapien vitae erat tincidunt aliquam sit amet in erat. 
                     </p>
                   </div>
-                  <a href="#" class="shop-now-btn">Read More</a>
+                  <a href="blogs/the-passion-of-love-while-celebrating.html" class="shop-now-btn">Read More</a>
                 </div>
               </a>
             </div>
 
             <!-- News Card 2 -->
             <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
+              <a href="blogs/the-passion-of-love-while-celebrating.html" class="text-decoration-none">
                 <div class="news-card d-flex flex-column justify-content-start align-items-start">
                   <div class="card-img mb-3">
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_7.png?v=1707903576" class="card-img-top rounded-4" alt="News">
@@ -1363,7 +1381,7 @@
                     <p class="card-text text-truncate-3 mb-3">
                       Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus.
                     </p>
-                    <a href="#" class="shop-now-btn">Read More</a>
+                    <a href="blogs/the-passion-of-love-while-celebrating.html" class="shop-now-btn">Read More</a>
                   </div>
                 </div>
               </a>
@@ -1371,7 +1389,7 @@
 
             <!-- News Card 3 -->
             <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
+              <a href="blogs/the-passion-of-love-while-celebrating.html" class="text-decoration-none">
                 <div class="news-card d-flex flex-column justify-content-start align-items-start">
                 <div class="card-img mb-3">
                   <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_8.png?v=1707903589" class="card-img-top rounded-4" alt="News">
@@ -1382,7 +1400,7 @@
                   <p class="card-text text-truncate-3 mb-3">
                     Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
                   </p>
-                  <a href="#" class="shop-now-btn">Read More</a>
+                  <a href="blogs/the-passion-of-love-while-celebrating.html" class="shop-now-btn">Read More</a>
                 </div>
               </div>
               </a>
@@ -1390,7 +1408,7 @@
 
             <!-- News Card 4 -->
             <div class="swiper-slide h-100">
-              <a href="#" class="text-decoration-none">
+              <a href="blogs/the-passion-of-love-while-celebrating.html" class="text-decoration-none">
                 <div class="news-card d-flex flex-column justify-content-start align-items-start">
                   <div class="card-img mb-3">
                     <img src="https://toytime-theme.myshopify.com/cdn/shop/articles/Untitled-2_83501fb4-9e30-4c60-81c0-be2e2023bf19_3.png?v=1707903612" class="card-img-top rounded-4" alt="News">
@@ -1402,7 +1420,7 @@
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget sapien vitae erat tincidunt aliquam sit amet in erat. 
                     </p>
                   </div>
-                  <a href="#" class="shop-now-btn">Read More</a>
+                  <a href="blogs/the-passion-of-love-while-celebrating.html" class="shop-now-btn">Read More</a>
                 </div>
               </a>
             </div>
@@ -1481,7 +1499,7 @@
       <!-- Bootstrap Icons -->
 
       <!-- Footer Top -->
-      <div class="footer-top bg-light py-5 rounded-top-4">
+      <div class="footer-top bg-light py-4 py-lg-5 rounded-top-4">
         <div class="container">
           <div class="row g-4">
             
@@ -1513,10 +1531,10 @@
             <div class="col-md-4 col-6 col-lg-2">
               <h6 class="fw-bold mb-3">Services</h6>
               <ul class="list-unstyled">
-                <li><a href="contact.html" class="text-decoration-none text-muted d-block mb-2">Contact</a></li>
+                <li><a href="../contact.html" class="text-decoration-none text-muted d-block mb-2">Contact</a></li>
                 <li><a href="#" class="text-decoration-none text-muted d-block mb-2">Careers</a></li>
                 <li><a href="#" class="text-decoration-none text-muted d-block mb-2">24/7 Support</a></li>
-                <li><a href="blogs.html" class="text-decoration-none text-muted d-block mb-2">News</a></li>
+                <li><a href="../blogs.html" class="text-decoration-none text-muted d-block mb-2">News</a></li>
                 <li><a href="#" class="text-decoration-none text-muted d-block">Delivery Info</a></li>
               </ul>
             </div>
@@ -1576,7 +1594,7 @@
       </div>
 
       <!-- Footer bottom -->
-      <div class="footer-bottom bg-light border-top px-4 rounded-bottom-4 py-3">
+      <div class="footer-bottom bg-light border-top px-1 px-lg-4 px-md-4 rounded-bottom-4 py-2 py-lg-3">
         <div class="container">
           <div class="align-items-center justify-content-between text-center text-md-start">
             <div class="d-flex flex-column justify-content-between flex-md-row-reverse">
@@ -1584,7 +1602,7 @@
               <div class="payment mb-2 mb-md-0">
                 <ul class="list-inline mb-0 d-flex justify-content-center justify-content-md-end">
                   <li class="list-inline-item me-2">
-                    <img src="assets/images/payment.png" alt="Visa" height="32">
+                    <img src="../assets/images/payment.png" alt="Visa" height="32">
                   </li>
                 </ul>
               </div>

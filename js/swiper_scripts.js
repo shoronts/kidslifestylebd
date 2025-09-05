@@ -113,6 +113,7 @@ const cardSwiper = new Swiper('.card-swiper', {
     slidesPerView: 3,
     spaceBetween: 20,
     breakpoints: {
+      300: { slidesPerView: 2 },
       480: {
         direction: "horizontal",
         slidesPerView: 3

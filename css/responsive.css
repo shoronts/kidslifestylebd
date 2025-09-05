@@ -9,7 +9,7 @@
     padding:50px 0px!important;
   }
   .section-padding-bottom{
-    padding-bottom:50px;
+    padding-bottom:50px!important;
   }
   /* Styles for xs */
   .page-banner .banner-content{
@@ -38,6 +38,9 @@
     background-color: rgba(255, 255, 255, 0.6);
     padding: 30px 20px;
   }
+  #countdown .time-box{
+    padding: 0px 15px;
+  }
   #countdown p {
     font-size: 30px;
   }
@@ -56,10 +59,20 @@
   #cards .grid-banner-content .main-title {
   font-size: 20px;
   }
-
+  /* Blog page // Recent post */
+  .recent-post .post-card .content h5{
+    font-size:16px;
+  }
+  .recent-post .post-card .content p{
+    margin-bottom: 4px;
+  }
   /* Single product page */
   #singleProduct .single-product-img{
     height:100%;
+  }
+  /* Single news page // tags */
+  .news-body .tags li{
+    padding: 10px;
   }
   /* About page // Fabrics Slider  */
   #fabrics .row{
@@ -68,6 +81,10 @@
   /* Scroll to top btn */
   #btnBackToTop {
     bottom: 60px!important;
+  }
+  /* Single product page */
+  #singleProduct .swiper-slide{
+    padding:10px;
   }
 }
 

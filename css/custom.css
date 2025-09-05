@@ -118,7 +118,7 @@ Custom style for swiper slider pagination
   width:72px;
   height:72px;
   line-height: 50px;
-  z-index: 3;
+  z-index: 999;
   background-color: var(--main-color);
   color:var(--light-color);
   overflow: hidden;
