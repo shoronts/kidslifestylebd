@@ -87,3 +87,21 @@ __pycache__/
 # Misc artifacts
 *.bak
 *.orig
+
+# === Git Large File Storage (optional) ===
+.gitattributes
+
+# === Other ===
+/wp-content/cache/
+/wp-content/backups/
+/wp-content/upgrade/
+
+
+# === Ignore build outputs ===
+/dist/
+/build/
+/public/
+
+# === Custom temporary files ===
+*.bak
+*.tmp

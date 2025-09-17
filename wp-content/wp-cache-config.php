@@ -5,6 +5,7 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
+$wp_cache_debug_username = 'da972419381ba65310fb4cda49c32865';
 $dismiss_readable_warning = 1;
 $wp_cache_home_path = '/kidslifestylebd/';
 $wp_cache_slash_check = 1;
@@ -65,7 +66,7 @@ $wp_cache_debug_to_file = 0;
 $wp_super_cache_debug = 0;
 $wp_cache_debug_level = 5;
 $wp_cache_debug_ip = '';
-$wp_cache_debug_log = '';
+$wp_cache_debug_log = '0384e1dc1af7d8565a3b2c7ec027d1bf.php';
 $wp_cache_debug_email = '';
 $wp_cache_pages[ "search" ] = 0;
 $wp_cache_pages[ "feed" ] = 0;

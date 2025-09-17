@@ -1,0 +1,313 @@
+/*
+Theme Name: Kids Life Style BD
+Theme URI: https://kidslifestylebd.com/
+Author: Square Tech IT
+Author URI: https://squaretechit.com/
+Description: SquareTechIT is a forward-thinking IT solutions provider that stands as your gateway to tech excellence. With a strong commitment to innovation and a deep understanding of technology's ever-evolving landscape, we are dedicated to helping businesses and individuals achieve their digital goals.
+Version: 1.0
+Requires at least: 6
+Tested up to: 6.8.1
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kidslifestylebd
+tags: Web Developer, Custom Web Development, CMS Development, Wordpress Plugin Developers
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Common CSS */
+
+/* Colors */
+:root {
+    --main-color: #ff6f61;
+    --secondary-color: #ffd166;
+    --dark-color: #333;
+    --light-color: #f8f9fa;
+    --navbar-bg: #d0cbcb;
+    /* My coosen Colors */
+    --kls--primary--colors: #17387E;
+    --kls--secondary--colors: #F79B1C;
+}
+
+/* Google Fonts setup */
+html {
+    font-family: "Baloo 2", sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Baloo 2", sans-serif !important;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Baloo 2", sans-serif !important;
+    font-weight: 600;
+}
+
+p,
+ul {
+    font-family: "Baloo 2", sans-serif !important;
+    margin: 0 !important;
+}
+
+.main-color {
+    color: var(--main-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.dark-color {
+    color: var(--dark-color);
+}
+
+.light-color {
+    color: var(--light-color);
+}
+
+.bg-main-color {
+    background-color: var(--main-color);
+}
+
+.bg-secondary-color {
+    background-color: var(--secondary-color);
+}
+
+.bg-dark-color {
+    background-color: var(--dark-color);
+}
+
+.bg-light-color {
+    background-color: var(--light-color);
+}
+
+/* Buttons */
+.shop-now-btn,
+.see-btn,
+.checkout-button {
+    background-color: var(--main-color) !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--light-color) !important;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline;
+    border: none;
+}
+
+.shop-now-btn:hover,
+.see-btn:hover,
+.checkout-button:hover {
+    background-color: var(--dark-color) !important;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.see-btn {
+    text-transform: uppercase;
+    padding: 20px !important;
+}
+
+/* Sections padding */
+.section-padding {
+    padding: 100px 0px;
+}
+
+.section-padding-bottom {
+    padding-bottom: 100px;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* 
+
+Custom style for swiper slider pagination 
+
+*/
+
+.swiper-pagination-bullet {
+    background: black;
+    opacity: 1;
+    width: 5px;
+    height: 5px;
+    position: relative;
+    transition: all var(--duration-default, 0.3s) linear;
+    display: inline-block;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    border-radius: 2px;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+    width: 30px;
+    height: 5px;
+    border-radius: 2px;
+}
+
+/* Button back to top button */
+
+#btnBackToTop {
+    padding: 0;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    width: 72px;
+    height: 72px;
+    line-height: 50px;
+    z-index: 999;
+    background-color: var(--main-color);
+    color: var(--light-color);
+    overflow: hidden;
+    transition: all 1s ease;
+    border: 0;
+}
+
+#btnBackToTop .scroll-text {
+    position: absolute;
+    left: 11%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 12%;
+    animation: rotateText 5s linear infinite;
+}
+
+/* Rotation keyframes */
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#btnBackToTop:hover {
+    transform: scale(1.1);
+    transition: all 1s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#btnBackToTop:hover .scroll-text {
+    animation-play-state: paused;
+}
+
+#btnBackToTop .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    opacity: 1;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.set-img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.page-banner .banner-content {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--media-radius);
+    border-radius: 20px;
+}
+
+.pagination ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.pagination li {
+    margin: 0 2px;
+}
+
+.pagination li a,
+.pagination li span {
+    color: #007bff;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+}
+
+.pagination li.active span {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.pagination li a:hover {
+    background-color: #e9ecef;
+}
+
+/* Select 2 CSS */
+
+.select2-container .select2-results ul li:hover,
+.select2-container .select2-results ul li.select2-results__option.select2-results__option--highlighted {
+    background: var(--primary-color);
+}
+
+.select2-container .select2-results ul li {
+    font-size: 14px;
+    color: #767676;
+}
+
+.select2-container.select2-container--open .select2-dropdown--below,
+.select2-search__field,
+.select2-container .select2-dropdown,
+.select2-container .select2-selection {
+    border: 2px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.select2-container .select2-dropdown,
+.select2-container .select2-selection {
+    text-align: left;
+    padding: 5px;
+}
+
+.select2-selection__rendered {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
