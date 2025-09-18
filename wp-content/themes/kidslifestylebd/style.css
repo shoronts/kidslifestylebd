@@ -60,7 +60,7 @@ ul {
 }
 
 .main-color {
-    color: var(--main-color);
+    color: var(--main-color) !important;
 }
 
 .secondary-color {
@@ -144,22 +144,21 @@ Custom style for swiper slider pagination
 */
 
 .swiper-pagination-bullet {
-    background: black;
-    opacity: 1;
-    width: 5px;
-    height: 5px;
-    position: relative;
-    transition: all var(--duration-default, 0.3s) linear;
-    display: inline-block;
-    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
-    border-radius: 2px;
+    background: black !important;
+    opacity: 1 !important;
+    width: 5px !important;
+    height: 5px !important;
+    position: relative !important;
+    transition: all var(--duration-default, 0.3s) linear !important;
+    display: inline-block !important;
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px) !important;
+    border-radius: 2px !important;
 }
 
-/* Active bullet */
 .swiper-pagination-bullet-active {
-    width: 30px;
-    height: 5px;
-    border-radius: 2px;
+    width: 30px !important;
+    height: 5px !important;
+    border-radius: 2px !important;
 }
 
 /* Button back to top button */

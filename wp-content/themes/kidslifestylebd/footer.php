@@ -197,6 +197,37 @@ $footer_address = get_theme_mod('stit_footer_address');
         </svg>
     </div>
 </button>
+<script>
+    jQuery(document).ready(function ($) {
+    $('.add-to-cart-btn').on('click', function (e) {
+        e.preventDefault();
+        var button = $(this);
+        var product_id = button.data('product_id');
+        var url = button.data('url')
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: {
+                action: 'custom_add_to_cart',
+                product_id: product_id
+            },
+            beforeSend: function () { },
+            success: function (response) {
+                if (response.success) {
+                    // $(document.body).trigger('added_to_cart', [response.data.fragments, response.data.cart_hash, button]);
+                    alert("Product added to cart!");
+                }
+            },
+            complete: function () {
+                // setTimeout(function(){
+                //     button.prop('disabled', false).text('Add to Cart');
+                // }, 2000);
+            }
+        });
+    });
+});
+</script>
 <?php wp_footer(); ?>
 </body>
 

@@ -541,6 +541,7 @@ function custom_add_to_cart() {
     $added = WC()->cart->add_to_cart($product_id, $quantity);
 
     if ($added) {
+        // Return updated fragments (for mini cart updates)
         ob_start();
         woocommerce_mini_cart();
         $fragments = ob_get_clean();

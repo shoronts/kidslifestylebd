@@ -30,7 +30,7 @@ global $product;
 	</div>
 
 	<!-- Add to Cart -->
-	<button type="submit" class="single_add_to_cart_button button btn mx-2 alt<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>">
+	<button type="submit" class="single_add_to_cart_button add-to-cart-btn button btn mx-2 alt<?php echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : ''); ?>">
 		<?php echo esc_html($product->single_add_to_cart_text()); ?>
 	</button>
 

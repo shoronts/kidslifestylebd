@@ -412,6 +412,7 @@ get_header('shop');
                                                     </button>
                                                     <button class="icon-btn add-to-cart-btn"
                                                         data-product_id="<?php echo get_the_ID(); ?>"
+                                                        data-url="<?php echo admin_url('admin-ajax.php'); ?>"
                                                         data-bs-toggle="tooltip"
                                                         title="Add to Cart">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
@@ -443,35 +444,5 @@ get_header('shop');
         </div>
     </section>
 </main>
-<script>
-    jQuery(document).ready(function($) {
-        $('.add-to-cart-btn').on('click', function(e) {
-            e.preventDefault();
-            var button = $(this);
-            var product_id = button.data('product_id');
-
-            $.ajax({
-                url: "<?php echo admin_url('admin-ajax.php'); ?>",
-                type: 'POST',
-                data: {
-                    action: 'custom_add_to_cart',
-                    product_id: product_id
-                },
-                beforeSend: function() {},
-                success: function(response) {
-                    if (response.success) {
-                        // $(document.body).trigger('added_to_cart', [response.data.fragments, response.data.cart_hash, button]);
-                        alert("Product added to cart!");
-                    }
-                },
-                complete: function() {
-                    // setTimeout(function(){
-                    //     button.prop('disabled', false).text('Add to Cart');
-                    // }, 2000);
-                }
-            });
-        });
-    });
-</script>
 <?php
 get_footer('shop');

@@ -65,15 +65,20 @@ class Breadcrumb extends Widget_Base
     {
         $settings = $this->get_settings_for_display();
 ?>
-        <section id="breadcrumb" class="d-flex align-items-center justify-content-center" style="background-image: url(<?php echo esc_url($settings['breadcrumb_image']['url']); ?>);">
-            <div class="breadcrumb-content">
-                <h1 class="banner-header"><?php echo esc_html($settings['breadcrumb_title']); ?></h1>
-                <div class="d-flex gap-2 justify-content-center">
-                    <p class="banner-home">
-                        <a class="text-decoration-none text-black" href="<?php echo esc_url(home_url()); ?>">Home</a>
-                    </p>
-                    <span>/</span>
-                    <p class="banner-store"><?php echo esc_html($settings['breadcrumb_text']); ?></p>
+        <section class="pt-4">
+            <div id="page-banner" class="container-fluid page-banner">
+                <div class="px-2 px-lg-4">
+                    <div class="banner-content h-100 rounded-3" style="background-image: url('<?php echo esc_url($settings['breadcrumb_image']['url']); ?>');">
+                        <div class="text-center py-4">
+                            <h2 class="mb-3"><?php echo esc_html($settings['breadcrumb_title']); ?></h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0 d-flex justify-content-center align-items-center">
+                                    <li class="breadcrumb-item"><a href="<?php echo esc_url(home_url()); ?>" class="text-decoration-none">Home</a></li>
+                                    <li class="breadcrumb-item"><?php echo esc_html($settings['breadcrumb_text']); ?></li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
