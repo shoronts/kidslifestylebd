@@ -4,7 +4,6 @@
 function stit_add_woocommerce_support()
 {
     add_theme_support('woocommerce');
-    // Optional: declare extra features
     add_theme_support('wc-product-gallery-zoom');
     add_theme_support('wc-product-gallery-lightbox');
     add_theme_support('wc-product-gallery-slider');
@@ -13,18 +12,31 @@ add_action('after_setup_theme', 'stit_add_woocommerce_support');
 
 // Force "Buy Now" to redirect to Checkout instead of Cart
 add_filter('woocommerce_add_to_cart_redirect', function ($url) {
-    if (isset($_REQUEST['buy_now']) && isset($_REQUEST['add-to-cart'])) {
+    if (
+        isset($_REQUEST['buy_now']) &&
+        isset($_REQUEST['add-to-cart']) &&
+        strpos(wp_get_referer(), '/product/') !== false
+    ) {
         return wc_get_checkout_url();
     }
     return $url;
 });
 
-// Disable AJAX add to cart for variable products when "Buy Now" is used
 add_action('wp_enqueue_scripts', function () {
-    if (is_product() && isset($_REQUEST['buy_now'])) {
-        wp_dequeue_script('wc-add-to-cart-variation');
+    if (function_exists('is_woocommerce') || is_page()) {
+        wp_enqueue_script('wc-add-to-cart');
+        wp_enqueue_script('wc-add-to-cart-variation');
+        wp_enqueue_script('wc-cart-fragments');
+        wp_enqueue_script('jquery');
     }
-}, 999);
+}, 20);
+
+// Disable AJAX add to cart for variable products when "Buy Now" is used
+// add_action('wp_enqueue_scripts', function () {
+//     if (is_product() && isset($_REQUEST['buy_now'])) {
+//         wp_dequeue_script('wc-add-to-cart-variation');
+//     }
+// }, 999);
 
 // Change the number of products or columns
 add_filter('woocommerce_output_related_products_args', function ($args) {
@@ -113,7 +125,6 @@ add_filter('woocommerce_default_address_fields', function($fields) {
     $fields['address_1']['required'] = true;
     return $fields;
 });
-
 
 // Save Full Name (split) for billing & shipping
 add_action('woocommerce_checkout_create_order', function ($order, $data) {
@@ -530,27 +541,57 @@ add_action('save_post_product', function ($post_id) {
 add_action('wp_ajax_custom_add_to_cart', 'custom_add_to_cart');
 add_action('wp_ajax_nopriv_custom_add_to_cart', 'custom_add_to_cart');
 
-function custom_add_to_cart() {
-    if (!isset($_POST['product_id'])) {
-        wp_send_json_error();
+function custom_add_to_cart()
+{
+    if (empty($_POST['product_id'])) {
+        wp_send_json_error(['message' => 'Product ID missing']);
     }
 
-    $product_id = intval($_POST['product_id']);
-    $quantity = 1;
+    $product_id   = absint($_POST['product_id']);
+    $quantity     = isset($_POST['quantity']) ? absint($_POST['quantity']) : 1;
+    $buy_now      = !empty($_POST['buy_now']);
+    $variation_id = isset($_POST['variation_id']) ? absint($_POST['variation_id']) : 0;
+    $variations   = [];
 
-    $added = WC()->cart->add_to_cart($product_id, $quantity);
+    $product = wc_get_product($product_id);
+    if (!$product) wp_send_json_error(['message' => 'Invalid product']);
 
-    if ($added) {
-        // Return updated fragments (for mini cart updates)
-        ob_start();
-        woocommerce_mini_cart();
-        $fragments = ob_get_clean();
-
-        wp_send_json_success(array(
-            'fragments' => $fragments,
-            'cart_hash' => WC()->cart->get_cart_hash(),
-        ));
+    // Handle variable product
+    if ($product->is_type('variable')) {
+        $available_attributes = $product->get_attributes();
+        foreach ($available_attributes as $name => $options) {
+            $key = 'attribute_' . sanitize_title($name);
+            if (isset($_POST[$key]) && $_POST[$key] !== '') {
+                $variations[$name] = wc_clean($_POST[$key]);
+            } else {
+                wp_send_json_error(['message' => 'Please select all product options']);
+            }
+        }
+        if (!$variation_id) {
+            wp_send_json_error(['message' => 'Please select a valid product variation']);
+        }
+        $added = WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variations);
     } else {
-        wp_send_json_error();
+        $added = WC()->cart->add_to_cart($product_id, $quantity);
     }
+
+    if (!$added) wp_send_json_error(['message' => 'Failed to add product to cart']);
+
+    ob_start();
+    woocommerce_mini_cart();
+    $mini_cart = ob_get_clean();
+
+    $response = [
+        'message'   => 'Product added successfully',
+        'fragments' => [
+            '.widget_shopping_cart_content' => $mini_cart
+        ]
+    ];
+
+    if ($buy_now) {
+        $response['buy_now']  = true;
+        $response['redirect'] = wc_get_checkout_url();
+    }
+
+    wp_send_json_success($response);
 }

@@ -310,3 +310,7 @@ Custom style for swiper slider pagination
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5) !important;
 }
+
+.direct-checkout-wrapper .page-banner {
+    display: none !important;
+}

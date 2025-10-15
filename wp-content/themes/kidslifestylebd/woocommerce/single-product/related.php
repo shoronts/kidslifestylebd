@@ -62,7 +62,7 @@ global $product;
 										</button>
 
 										<!-- Add to Cart -->
-										<button class="icon-btn add-to-cart-btn"
+										<button class="icon-btn add-to-cart-btn single-add-to-cart-btn"
 											data-product_id="<?php echo esc_attr($product_id); ?>"
 											data-bs-toggle="tooltip"
 											data-url="<?php echo admin_url('admin-ajax.php'); ?>"

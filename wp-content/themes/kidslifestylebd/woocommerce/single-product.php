@@ -24,9 +24,15 @@ $type = $product->get_type();
                         </div>
                         <div class="product-summary col-md-6 col-sm-12">
                             <?php do_action('woocommerce_before_main_content'); ?>
-                            <div class="product-title h-100"><?php woocommerce_template_single_title(); ?></div>
-                            <div class="product-price"><?php woocommerce_template_single_price(); ?></div>
-                            <div class="product-short-description"><?php woocommerce_template_single_excerpt(); ?></div>
+                            <div class="product-title h-100">
+                                <?php woocommerce_template_single_title(); ?>
+                            </div>
+                            <div class="product-price">
+                                <?php woocommerce_template_single_price(); ?>
+                            </div>
+                            <div class="product-short-description">
+                                <?php woocommerce_template_single_excerpt(); ?>
+                            </div>
                             <div class="get-product-now">
                                 <?php
                                 if ($type === 'simple') {

@@ -107,6 +107,7 @@ function custom_login_background() {
             text-align: center;
         }
 
+        .login .privacy-policy-page-link a,
         .login #backtoblog a, .login #nav a{
             color: #fff!important;
         }

@@ -199,7 +199,7 @@ $footer_address = get_theme_mod('stit_footer_address');
 </button>
 <script>
     jQuery(document).ready(function ($) {
-    $('.add-to-cart-btn').on('click', function (e) {
+    $('.single-add-to-cart-btn').on('click', function (e) {
         e.preventDefault();
         var button = $(this);
         var product_id = button.data('product_id');

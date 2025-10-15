@@ -462,6 +462,14 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px dashed var(--dark-color);
+  height: 300px;
+  width: 100%;
+}
+
+.newarrival-swiper .product-img,
+.newarrival-swiper .product-img>a {
+  height: 200px !important;
+  padding: 0 !important;
 }
 
 .product-card:hover .product-img {
@@ -472,6 +480,10 @@
   width: 100%;
   display: block;
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .product-img .hover-img {
@@ -668,12 +680,12 @@
   width: 35px;
 }
 
-footer .footer-menu ul {
+footer ul.footer-menu {
   padding-left: 0;
   list-style: none;
 }
 
-footer .footer-menu ul a {
+footer ul.footer-menu a {
   text-decoration: none;
   --bs-text-opacity: 1;
   color: var(--bs-secondary-color) !important;
@@ -1725,7 +1737,7 @@ Contact page
 
 .quantity-wrapper button.quantity-minus:hover,
 .quantity-wrapper button.quantity-plus:hover {
-  background: var(--primary-color);
+  background: var(--kls--primary--colors);
   color: #fff;
 }
 
@@ -1875,6 +1887,7 @@ Contact page
   margin-left: 10px;
   margin-right: 10px;
   height: 60px !important;
+  width: 100px !important;
   min-width: 60px !important;
 }
 
@@ -2174,8 +2187,9 @@ Contact page
   border-radius: 5px;
 }
 
+#product-section .product-content-wrapper .product-summary .get-product-now .variation-wrapper button.variation-button:hover,
 #product-section .product-content-wrapper .product-summary .get-product-now .variation-wrapper button.variation-button.active {
-  background: var(--primary-color);
+  background: var(--kls--primary--colors);
   color: #fff;
 }
 
@@ -2187,12 +2201,12 @@ Contact page
   font-weight: 600;
   color: #fff;
   text-transform: uppercase;
-  background-color: #2E7046;
+  background-color: var(--kls--primary--colors) !important;
   display: block;
 }
 
 #product-section .product-content-wrapper .product-summary .get-product-now .single_add_to_cart_button:hover {
-  background-color: #619E44;
+  background-color: var(--kls--secondary--colors) !important;
 }
 
 #product-section .product-content-wrapper .product-summary .get-product-now .group-product .product-title,
@@ -2206,7 +2220,7 @@ Contact page
 
 #product-section .product-content-wrapper .product-summary .get-product-now .group-product .product-btn a {
   padding: 8px 16px;
-  background-color: #2E7046;
+  background-color: var(--kls--primary--colors);
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -2215,7 +2229,7 @@ Contact page
 }
 
 #product-section .product-content-wrapper .product-summary .get-product-now .group-product .product-btn a:hover {
-  background-color: #619E44;
+  background-color: var(--kls--secondary--colors);
 }
 
 #product-section .product-content-wrapper .product-summary .other-info .sku p,
@@ -2260,7 +2274,7 @@ Contact page
 
 #product-section #product-all-info .accordion-item .accordion-header .accordion-button:not(.collapsed) {
   background-color: transparent;
-  color: #2E7046;
+  color: var(--kls--primary--colors);
 }
 
 #product-section #product-all-info .accordion-item .accordion-header .accordion-button:focus {
