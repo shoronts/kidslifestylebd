@@ -6,8 +6,8 @@ do_action('woocommerce_review_order_before_cart_contents');
 
 <div class="woocommerce-notices-wrapper"><?php wc_print_notices(); ?></div>
 
-<table class="shop_table woocommerce-checkout-review-order-table" id="checkout-table">
-
+<table class="shop_table woocommerce-checkout-review-order-table" id="checkout-table" 
+    data-is-widget="<?php echo apply_filters('is_widget_checkout', false) ? 1 : 0; ?>">
     <thead>
         <tr>
             <th>Product</th>
@@ -21,35 +21,39 @@ do_action('woocommerce_review_order_before_cart_contents');
             if ($_product && $_product->exists() && $cart_item['quantity'] > 0) : ?>
                 <tr>
                     <td class="d-flex align-items-center product-box">
-                        <button type="button" class="remove-checkout-item btn p-0 m-0 d-block" data-cart-item-key="<?php echo esc_attr($cart_item_key); ?>">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                            </svg>
-                        </button>
+                        <?php if (! apply_filters('is_widget_checkout', false)) : ?>
+                            <button type="button" class="remove-checkout-item btn p-0 m-0 d-block" data-cart-item-key="<?php echo esc_attr($cart_item_key); ?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </button>
+                        <?php endif; ?>
                         <div class="product-img"><?php echo $_product->get_image('woocommerce_thumbnail'); ?></div>
                         <div class="product-info w-100">
                             <h6><?php echo wp_kses_post($_product->get_name()); ?></h6>
-                            <div class="quantity-wrapper w-100">
-                                <div class="d-flex align-items-center w-100">
-                                    <button type="button" class="quantity-minus btn">-</button>
-                                    <?php
-                                    if ($_product->is_sold_individually()) {
-                                        $min = 1;
-                                        $max = 1;
-                                    } else {
-                                        $min = 0;
-                                        $max = $_product->get_max_purchase_quantity();
-                                    }
-                                    echo woocommerce_quantity_input(array(
-                                        'input_name'  => "cart[{$cart_item_key}][qty]",
-                                        'input_value' => $cart_item['quantity'],
-                                        'max_value'   => $max,
-                                        'min_value'   => $min,
-                                    ), $_product, false);
-                                    ?>
-                                    <button type="button" class="quantity-plus btn">+</button>
+                            <?php if (! apply_filters('is_widget_checkout', false)) : ?>
+                                <div class="quantity-wrapper w-100">
+                                    <div class="d-flex align-items-center w-100">
+                                        <button type="button" class="quantity-minus btn">-</button>
+                                        <?php
+                                        if ($_product->is_sold_individually()) {
+                                            $min = 1;
+                                            $max = 1;
+                                        } else {
+                                            $min = 0;
+                                            $max = $_product->get_max_purchase_quantity();
+                                        }
+                                        echo woocommerce_quantity_input(array(
+                                            'input_name'  => "cart[{$cart_item_key}][qty]",
+                                            'input_value' => $cart_item['quantity'],
+                                            'max_value'   => $max,
+                                            'min_value'   => $min,
+                                        ), $_product, false);
+                                        ?>
+                                        <button type="button" class="quantity-plus btn">+</button>
+                                    </div>
                                 </div>
-                            </div>
+                            <?php endif; ?>
                             <p class="mb-0 mt-2 product-mobile-price"><?php echo WC()->cart->get_product_subtotal($_product, $cart_item['quantity']); ?></p>
                         </div>
                     </td>
@@ -77,7 +81,7 @@ do_action('woocommerce_review_order_before_cart_contents');
 </table>
 <input type="hidden" name="woocommerce-process-checkout-nonce" value="xyz">
 
-
+<?php if (! apply_filters('is_widget_checkout', false)) : ?>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const removeProductsCheckout = () => {
@@ -97,9 +101,9 @@ do_action('woocommerce_review_order_before_cart_contents');
                     const formData = new URLSearchParams();
                     formData.append('action', 'remove_checkout_item');
                     formData.append('cart_item_key', cartItemKey);
-                    formData.append('nonce', my_ajax_object.remove_nonce);
+                    formData.append('nonce', checkout_ajax_object.remove_nonce);
 
-                    fetch(my_ajax_object.ajax_url, {
+                    fetch(checkout_ajax_object.ajax_url, {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/x-www-form-urlencoded'
@@ -141,9 +145,9 @@ do_action('woocommerce_review_order_before_cart_contents');
             formData.append('action', 'update_checkout_item_qty');
             formData.append('cart_item_key', cartItemKey);
             formData.append('quantity', qty);
-            formData.append('nonce', my_ajax_object.qty_nonce);
+            formData.append('nonce', checkout_ajax_object.qty_nonce);
 
-            fetch(my_ajax_object.ajax_url, {
+            fetch(checkout_ajax_object.ajax_url, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -159,8 +163,9 @@ do_action('woocommerce_review_order_before_cart_contents');
                         }
                         document.body.dispatchEvent(new Event('update_checkout'));
                         setTimeout(() => {
+                            removeProductsCheckout();
                             quantityCheckout();
-                        }, 1000);
+                        }, 4000);
                     } else {
                         console.error(data);
                         alert(data.data || 'Error updating quantity.');
@@ -221,3 +226,4 @@ do_action('woocommerce_review_order_before_cart_contents');
         }, 2000);
     });
 </script>
+<?php endif; ?>

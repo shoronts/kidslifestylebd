@@ -14,28 +14,31 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 	return;
 }
 ?>
-<section class="pt-4">
-	<div id="page-banner" class="container-fluid page-banner">
-		<div class="px-2 px-lg-4">
-			<div class="banner-content h-100 rounded-3" style="background-image: url('<?php echo esc_url(get_theme_mod('wc_store_banner_image')); ?>');">
-				<div class="text-center py-4">
-					<h2 class="mb-3">Kids Life Style BD</h2>
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb mb-0 d-flex justify-content-center align-items-center">
-							<li class="breadcrumb-item">
-								<a class="text-black text-decoration-none" href="<?php echo esc_url(wc_get_cart_url()); ?>">Cart</a>
-							</li>
-							<li class="breadcrumb-item" aria-current="page">
-								<a class="text-black" href="<?php echo esc_url(wc_get_checkout_url()); ?>">Checkout</a>
-							</li>
-							<li class="breadcrumb-item active" aria-current="page">Order complete</li>
-						</ol>
-					</nav>
+<?php if (! apply_filters('is_widget_checkout', false)) : ?>
+	<section class="pt-4">
+		<div id="page-banner" class="container-fluid page-banner">
+			<div class="px-2 px-lg-4">
+				<div class="banner-content h-100 rounded-3" style="background-image: url('<?php echo esc_url(get_theme_mod('wc_store_banner_image')); ?>');">
+					<div class="text-center py-4">
+						<h2 class="mb-3">Kids Life Style BD</h2>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb mb-0 d-flex justify-content-center align-items-center">
+								<li class="breadcrumb-item">
+									<a class="text-black text-decoration-none" href="<?php echo esc_url(wc_get_cart_url()); ?>">Cart</a>
+								</li>
+								<li class="breadcrumb-item" aria-current="page">
+									<a class="text-black" href="<?php echo esc_url(wc_get_checkout_url()); ?>">Checkout</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Order complete</li>
+							</ol>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
+<?php endif; ?>
+
 
 <section id="checkout-section" class="py-5">
 	<div class="container-xl">

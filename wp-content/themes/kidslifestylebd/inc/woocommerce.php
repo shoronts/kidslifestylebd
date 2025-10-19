@@ -31,12 +31,6 @@ add_action('wp_enqueue_scripts', function () {
     }
 }, 20);
 
-// Disable AJAX add to cart for variable products when "Buy Now" is used
-// add_action('wp_enqueue_scripts', function () {
-//     if (is_product() && isset($_REQUEST['buy_now'])) {
-//         wp_dequeue_script('wc-add-to-cart-variation');
-//     }
-// }, 999);
 
 // Change the number of products or columns
 add_filter('woocommerce_output_related_products_args', function ($args) {
@@ -58,7 +52,7 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
         'billing_full_name',
         'billing_phone',
         'billing_address_1',
-        'billing_country', 
+        'billing_country',
         // 'billing_address_2', 
         // 'billing_city', 
         // 'billing_postcode', 
@@ -115,10 +109,9 @@ add_filter('woocommerce_checkout_fields', function ($fields) {
     // add_filter('woocommerce_ship_to_different_address_checked', '__return_false');
 
     return $fields;
-
 }, 20);
 
-add_filter('woocommerce_default_address_fields', function($fields) {
+add_filter('woocommerce_default_address_fields', function ($fields) {
     $fields['address_1']['label'] = __('ঠিকানা', 'woocommerce');
     $fields['address_1']['placeholder'] = __('বাসা নং, রোড নং, থানা, জেলা', 'woocommerce');
     $fields['address_1']['class'][] = 'form-row-wide';
@@ -227,7 +220,7 @@ remove_action('woocommerce_checkout_terms_and_conditions', 'wc_checkout_privacy_
 
 // Provide AJAX URL and nonce for checkout remove
 add_action('wp_enqueue_scripts', function () {
-    wp_localize_script('wc-checkout', 'my_ajax_object', array(
+    wp_localize_script('wc-checkout', 'checkout_ajax_object', array(
         'ajax_url'     => admin_url('admin-ajax.php'),
         'remove_nonce' => wp_create_nonce('my_remove_checkout_item_nonce'),
         'qty_nonce'    => wp_create_nonce('update-qty-nonce'),
@@ -327,7 +320,6 @@ function custom_highlight_wishlist_menu($classes, $endpoint)
 
     return $classes;
 }
-
 
 // Enqueue JS and Add AJAX Script
 
@@ -464,16 +456,14 @@ add_action('add_meta_boxes', function () {
         'low'
     );
 });
-
 // Render Hover Image box (same as Featured Image UI)
-function render_hover_image_box($post) {
+function render_hover_image_box($post)
+{
     $hover_image_id = get_post_meta($post->ID, '_hover_image_id', true);
     $image = $hover_image_id ? wp_get_attachment_image_src($hover_image_id, 'thumbnail')[0] : '';
-
-    ?>
+?>
     <div id="hover_image_container" style="margin-bottom: -10px;">
         <input type="hidden" id="hover_image_id" name="hover_image_id" value="<?php echo esc_attr($hover_image_id); ?>" />
-
         <div id="hover_image_preview" style="cursor:pointer;">
             <?php if ($image): ?>
                 <img src="<?php echo esc_url($image); ?>" style="max-width:100%; height:auto;" />
@@ -484,32 +474,33 @@ function render_hover_image_box($post) {
                 <a href="javascript:void(0)"><?php _e('Click to set hover image', 'woocommerce'); ?></a>
             <?php endif; ?>
         </div>
-
         <p style="margin-top:8px;">
             <a href="javascript:void(0)" class="remove-hover-image" style="color:#a00;<?php echo $hover_image_id ? '' : 'display:none;'; ?>">
                 <?php _e('Remove Hover Image', 'woocommerce'); ?>
             </a>
         </p>
     </div>
-
     <script>
-        jQuery(document).ready(function($){
+        jQuery(document).ready(function($) {
             var frame;
-
-            // Click on image area to upload/change
-            $('#hover_image_preview').on('click', function(e){
+            $('#hover_image_preview').on('click', function(e) {
                 e.preventDefault();
-                if(frame){ frame.open(); return; }
+                if (frame) {
+                    frame.open();
+                    return;
+                }
                 frame = wp.media({
                     title: '<?php _e("Select or Upload Hover Image", "woocommerce"); ?>',
-                    button: { text: '<?php _e("Use this image", "woocommerce"); ?>' },
+                    button: {
+                        text: '<?php _e("Use this image", "woocommerce"); ?>'
+                    },
                     multiple: false
                 });
-                frame.on('select', function(){
+                frame.on('select', function() {
                     var attachment = frame.state().get('selection').first().toJSON();
                     $('#hover_image_id').val(attachment.id);
                     $('#hover_image_preview').html(
-                        '<img src="'+attachment.url+'" style="max-width:100%; height:auto;" />' +
+                        '<img src="' + attachment.url + '" style="max-width:100%; height:auto;" />' +
                         '<p class="hover-instruction" style="font-size:12px; color:#666; margin-top:6px;">' +
                         '<?php _e("Click the image to edit or update", "woocommerce"); ?>' +
                         '</p>'
@@ -518,9 +509,7 @@ function render_hover_image_box($post) {
                 });
                 frame.open();
             });
-
-            // Remove hover image
-            $('.remove-hover-image').on('click', function(e){
+            $('.remove-hover-image').on('click', function(e) {
                 e.preventDefault();
                 $('#hover_image_id').val('');
                 $('#hover_image_preview').html('<a href="javascript:void(0)"><?php _e("Click to set hover image", "woocommerce"); ?></a>');
@@ -528,35 +517,28 @@ function render_hover_image_box($post) {
             });
         });
     </script>
-    <?php
+<?php
 }
-
 // Save Hover Image
 add_action('save_post_product', function ($post_id) {
     if (isset($_POST['hover_image_id'])) {
         update_post_meta($post_id, '_hover_image_id', absint($_POST['hover_image_id']));
     }
 });
-
 add_action('wp_ajax_custom_add_to_cart', 'custom_add_to_cart');
 add_action('wp_ajax_nopriv_custom_add_to_cart', 'custom_add_to_cart');
-
 function custom_add_to_cart()
 {
     if (empty($_POST['product_id'])) {
         wp_send_json_error(['message' => 'Product ID missing']);
     }
-
     $product_id   = absint($_POST['product_id']);
     $quantity     = isset($_POST['quantity']) ? absint($_POST['quantity']) : 1;
     $buy_now      = !empty($_POST['buy_now']);
     $variation_id = isset($_POST['variation_id']) ? absint($_POST['variation_id']) : 0;
     $variations   = [];
-
     $product = wc_get_product($product_id);
     if (!$product) wp_send_json_error(['message' => 'Invalid product']);
-
-    // Handle variable product
     if ($product->is_type('variable')) {
         $available_attributes = $product->get_attributes();
         foreach ($available_attributes as $name => $options) {
@@ -574,24 +556,123 @@ function custom_add_to_cart()
     } else {
         $added = WC()->cart->add_to_cart($product_id, $quantity);
     }
-
     if (!$added) wp_send_json_error(['message' => 'Failed to add product to cart']);
-
     ob_start();
     woocommerce_mini_cart();
     $mini_cart = ob_get_clean();
-
     $response = [
         'message'   => 'Product added successfully',
         'fragments' => [
             '.widget_shopping_cart_content' => $mini_cart
         ]
     ];
-
     if ($buy_now) {
         $response['buy_now']  = true;
         $response['redirect'] = wc_get_checkout_url();
     }
-
     wp_send_json_success($response);
-}
+};
+// Direct Checkout Widget
+// Localize JS data
+add_action('wp_enqueue_scripts', function () {
+    wp_enqueue_script('direct-checkout-ajax', get_template_directory_uri() . '/assets/js/direct-checkout.js', ['jquery'], '1.0', true);
+    wp_localize_script('direct-checkout-ajax', 'DirectCheckout', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce'    => wp_create_nonce('direct_checkout_nonce'),
+        'qty_nonce'   => wp_create_nonce('direct_checkout_qty'),
+        'remove_nonce'=> wp_create_nonce('direct_checkout_remove'),
+    ]);
+});
+// Load checkout form
+add_action('wp_ajax_direct_checkout_load', 'direct_checkout_load');
+add_action('wp_ajax_nopriv_direct_checkout_load', 'direct_checkout_load');
+
+function direct_checkout_load() {
+    check_ajax_referer('direct_checkout_nonce', '_nonce');
+    add_filter('is_widget_checkout', fn() => true);
+
+    $product_id = intval($_POST['product_id'] ?? 0);
+    $variation_id = intval($_POST['variation_id'] ?? 0);
+    $attributes = json_decode(stripslashes($_POST['attributes'] ?? '{}'), true);
+    $shipping_method = $_POST['shipping_method'] ?? [];
+
+    // 🔹 Case 1: Shipping update (no product_id needed)
+    if (!$product_id && !empty($shipping_method)) {
+        WC()->session->set('chosen_shipping_methods', (array) $shipping_method);
+        WC()->cart->calculate_totals();
+        ob_start();
+        $checkout = WC()->checkout();
+        wc_get_template('checkout/form-checkout.php', ['checkout' => $checkout]);
+        $checkout_form = ob_get_clean();
+        wp_send_json_success($checkout_form);
+    }
+
+    // 🔹 Case 2: Initial load with product
+    if (!$product_id) {
+        wp_send_json_error('Product not specified');
+    }
+
+    WC()->cart->empty_cart();
+    if ($variation_id) {
+        WC()->cart->add_to_cart($product_id, 1, $variation_id, $attributes);
+    } else {
+        WC()->cart->add_to_cart($product_id, 1);
+    }
+    if (!empty($shipping_method)) {
+        WC()->session->set('chosen_shipping_methods', (array) $shipping_method);
+    }
+    WC()->cart->calculate_totals();
+    ob_start();
+    $checkout = WC()->checkout();
+    wc_get_template('checkout/form-checkout.php', ['checkout' => $checkout]);
+    $checkout_form = ob_get_clean();
+    wp_send_json_success($checkout_form);
+};
+add_action('wp_ajax_direct_checkout_submit', 'direct_checkout_submit');
+add_action('wp_ajax_nopriv_direct_checkout_submit', 'direct_checkout_submit');
+function direct_checkout_submit() {
+    check_ajax_referer('direct_checkout_nonce', '_nonce');
+    if ( ! WC()->cart || WC()->cart->is_empty() ) {
+        wp_send_json_error(['message' => 'Your cart is empty.']);
+    }
+    $checkout = WC()->checkout();
+    $data = [];
+    parse_str($_POST['form'] ?? '', $data);
+    $checkout_data = [
+        'billing_full_name'   => sanitize_text_field($data['billing_full_name'] ?? ''),
+        'billing_phone'       => sanitize_text_field($data['billing_phone'] ?? ''),
+        'billing_address_1'   => sanitize_text_field($data['billing_address_1'] ?? ''),
+        'billing_country'     => sanitize_text_field($data['billing_country'] ?? ''),
+        'order_comments'      => sanitize_textarea_field($data['order_comments'] ?? ''),
+        'payment_method'      => sanitize_text_field($data['payment_method'] ?? 'cod'),
+    ];
+    if ( empty($checkout_data['billing_full_name']) || empty($checkout_data['billing_phone']) ) {
+        wp_send_json_error(['message' => 'Please fill in all required fields.']);
+    }
+    try {
+        $order_id = $checkout->create_order($checkout_data);
+        if ( ! $order_id ) {
+            throw new Exception('Order could not be created.');
+        }
+        $order = wc_get_order($order_id);
+        $order->set_payment_method( $checkout_data['payment_method'] );
+        $order->save();
+        if ( $checkout_data['payment_method'] === 'cod' ) {
+            $order->update_status('processing');
+        }
+        wc_reduce_stock_levels($order_id);
+        WC()->cart->empty_cart();
+        $redirect = $order->get_checkout_order_received_url();
+        wp_send_json_success(['redirect' => $redirect]);
+    } catch ( Exception $e ) {
+        wp_send_json_error(['message' => $e->getMessage()]);
+    }
+};
+add_filter('woocommerce_cart_needs_shipping_address', '__return_true');
+
+add_filter('woocommerce_ship_to_different_address_checked', function($checked){
+    if (apply_filters('is_widget_checkout', false)) {
+        return false; // unchecked / hidden
+    }
+    return $checked;
+});

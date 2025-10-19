@@ -45,15 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Show/hide button on scroll
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      btnBackToTop.classList.add('show');
-      btnBackToTop.classList.remove('hide');
-      navbarWrapper.classList.add('navbar-wrapper');
-    } else {
-      btnBackToTop.classList.remove('show');
-      btnBackToTop.classList.add('hide');
-      navbarWrapper.classList.remove('navbar-wrapper');
-    }
+    if (btnBackToTop) {
+      if (window.scrollY > 100) {
+        btnBackToTop.classList.add('show');
+        btnBackToTop.classList.remove('hide');
+        navbarWrapper.classList.add('navbar-wrapper');
+      } else {
+        btnBackToTop.classList.remove('show');
+        btnBackToTop.classList.add('hide');
+        navbarWrapper.classList.remove('navbar-wrapper');
+      }
+    };
   });
 
   // Smooth scroll to top
